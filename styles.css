@@ -35,6 +35,8 @@ a, a:hover, a:active {
 #intro #title, #intro h3 {
     position: absolute;
     top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 #intro * {
@@ -82,5 +84,7 @@ a, a:hover, a:active {
 #intro #title.sticky {
     position: fixed;
     top: 0;
+    -ms-transform: none;
+    -webkit-transform: none;
     transform: none;
 }
