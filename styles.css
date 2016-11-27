@@ -1,0 +1,86 @@
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+/*#intro > *:first-child {
+    margin-top: 0;
+}*/
+.section > *:first-child {
+    margin-top: 0;
+}
+.section > *:last-child {
+    margin-bottom: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: #3f51b5;
+}
+/*h1, h2, h3, p {
+    display: inline-block;
+}*/
+
+.section {
+    min-height: 100vh;
+    padding: 20px;
+}
+.section:nth-child(2n+1) {
+    background-color: #565656;
+}
+
+#intro #title, #intro h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#intro * {
+    margin: 0;
+}
+#intro #title {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    padding-bottom: 10px;
+    /* http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28top\%2C\%20rgba\%2886\%2C86\%2C86\%2C1\%29\%2078\%25\%2C\%20rgba\%2886\%2C86\%2C86\%2C0\.59\%29\%2087\%25\%2C\%20rgba\%28255\%2C255\%2C255\%2C0\%29\%20100\%25\%29\%3B' */
+    background: rgba(86,86,86,1);
+    background: -moz-linear-gradient(top, rgba(86,86,86,1) 78%, rgba(86,86,86,0.59) 87%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(78%, rgba(86,86,86,1)), color-stop(87%, rgba(86,86,86,0.59)), color-stop(100%, rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top, rgba(86,86,86,1) 78%, rgba(86,86,86,0.59) 87%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top, rgba(86,86,86,1) 78%, rgba(86,86,86,0.59) 87%, rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top, rgba(86,86,86,1) 78%, rgba(86,86,86,0.59) 87%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(86,86,86,1) 78%, rgba(86,86,86,0.59) 87%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565656', endColorstr='#ffffff', GradientType=0 );
+}
+#intro h3 {
+    padding-top: 37px;
+    margin-top: 20px;
+}
+#intro ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 37px;
+}
+#intro li {
+    display: inline;
+}
+#intro li a {
+    color: #e4e4e4
+}
+#intro li::after {
+    content: ' / ';
+}
+#intro li:last-child::after {
+    content: none;
+}
+
+#intro #title.sticky {
+    position: fixed;
+    top: 0;
+    transform: none;
+}
