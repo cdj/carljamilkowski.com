@@ -114,3 +114,7 @@ a, a:hover, a:active {
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
+
+#projects .more {
+    margin-top: 60px;
+}
