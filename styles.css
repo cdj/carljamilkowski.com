@@ -97,3 +97,20 @@ a, a:hover, a:active {
 #title h1 {
     display: inline-block;
 }
+
+#mentions .kudos {
+    margin: 0 10px;
+    position: relative;
+}
+#mentions .kudos .slick-slide {
+    min-height: 80vh;
+    position: relative;
+}
+#mentions .kudos .kudo > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
