@@ -11,6 +11,13 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 4000
     });
+
+    $("a.local").click(function(e) {
+        e.preventDefault();
+        var newScrollTop = $($(this).attr("href")).offset().top - $("#title").height();
+
+        $('html, body').animate({scrollTop: newScrollTop}, 200);
+    });
 });
 
 function titleBarCheck() {
