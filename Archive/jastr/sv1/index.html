@@ -1,0 +1,273 @@
+<html ng-app="SV1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Jastr SV1 demo</title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- your app's css -->
+    <link href="css/raleway.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="AppController" style="color:white;background-color:#454e58;">
+
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+    <script id="templates/0LoC.html" type="text/ng-template">
+      <ion-view>
+        <ion-header-bar class="bar-jastr">
+            <a class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <div class="row row-center gridRow">
+            <div class="col col-33 serviceTile gridBottom gridRight">
+              <img src="img/Heart-Rate.png">
+            </div>
+            <div class="col col-33 serviceTile gridBottom gridLeft gridRight">
+              <img src="img/Staircase.png">
+            </div>
+            <div class="col col-33 serviceTile gridBottom gridLeft">
+              <img src="img/Thermal.png">
+            </div>
+          </div>
+          <div class="row row-center gridRow">
+            <div class="col col-33 serviceTile gridTop gridBottom gridRight">
+              <img src="img/DNA.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridBottom gridLeft gridRight">
+              <img src="img/Pills.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridBottom gridLeft">
+              <a href="#/syncing"><img src="img/Water-Drop.png"></a>
+            </div>
+          </div>
+          <div class="row row-center gridRow">
+            <div class="col col-33 serviceTile gridTop gridRight">
+              <img src="img/O2.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridLeft gridRight">
+              <img src="img/Clock.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridLeft">
+              <img src="img/Notes.png">
+            </div>
+          </div>
+          <div class="row row-center gridRow">
+            <div class="col col-10">
+              <a class="navButtons ion-chevron-down"></a>
+            </div>
+            <div class="col">
+              <a class="navButtons ion-close"></a>
+            </div>
+            <div class="col col-10">
+              <a class="navButtons ion-chevron-up"></a>
+            </div>
+          </div>
+          <div class="tabs tabs-background-light" style="border: 0;">
+              <a class="tab-item active">0&deg;</a>
+              <a class="tab-item">1&deg;</a>
+              <a class="tab-item">2&deg;</a>
+              <a class="tab-item">3&deg;</a>
+              <a class="tab-item">4&deg;</a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/syncing.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/0LoC" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <a href="#/monthlyGoals">
+            <img src="img/syncing.png" style="width:90vw; margin:auto 5%; position:relative; top:50%; transform:translateY(-50%);">
+          </a>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/monthlyGoals.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-content>
+          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('img/monthlyGoals.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
+            <a href="#/progress" style="top:19vh; bottom:1vh; left:5vh; width:36vh; display:block; position:absolute;"></a>
+            <a href="#/syncing" style="height: 4vh; bottom:0; left:-1vh; width:4vh; display:block; position:absolute;"></a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/progress.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/monthlyGoals" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Progress</p>
+          <div class="row">
+            <div class="col col-80 col-offset-10">
+              <a href="#/preferences"><img src="img/progress.png" style="width:100%;"></a>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/monthlyGoals" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/preferences" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/preferences.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/progress" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Preferences</p>
+          <p style="font-size: 135%; padding: 0; margin: 15px 0; vertical-align: middle; line-height: 30px;"><a class="titlePlusCircle"></a>Add preferences</p>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/lowWarning';">
+                <a href="#/lowWarning" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/lowWarning">Daily</a>
+                <a href="#/lowWarning" class="ion-more"></a>
+              </p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/lowWarning';">
+                <a href="#/lowWarning" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/lowWarning">Percentage</a>
+                <a href="#/lowWarning" class="ion-more"></a>
+              </p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/lowWarning';">
+                <a href="#/lowWarning" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/lowWarning">Thermal</a>
+                <a href="#/lowWarning" class="ion-more"></a>
+              </p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/lowWarning';">
+                <a href="#/lowWarning" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/lowWarning">Goals</a>
+                <a href="#/lowWarning" class="ion-more"></a>
+              </p>
+            </div>
+            <div class="col"></div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/progress" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/lowWarning" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/lowWarning.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/preferences" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <div style="position:absolute;bottom:0;background-color: #9fa4a9;">
+            <p class="col" style="font-size: 37px;line-height: 37px; text-transform: uppercase;padding:15px;margin:0;font-weight:200;">Jastr has indicated low H2O levels.</p>
+            <div class="row" style="font-size: 20px;">
+              <div class="col">
+                <a class="ion-close-round"></a>
+              </div>
+              <div class="col" style="text-align: right;">
+                  <a href="#/goals">VIEW</a>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/preferences" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/goals" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/goals.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/lowWarning" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Goals</p>
+          <div class="row">
+            <div class="col col-80 col-offset-10"><img src="img/goalsCompleted.png" style="width:100%;"></div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/lowWarning" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/0LoC" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+  </body>
+</html>

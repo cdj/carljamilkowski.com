@@ -1,0 +1,270 @@
+<html ng-app="CT2">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Jastr CT2 demo</title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- save notes text and detect enter to move to next screen -->
+    <script type="text/javascript">
+      var notesText = "";
+      function detectEnter(e) {
+        notesText = document.getElementById("notesTextArea").value;
+        if (e.keyCode == 13) {
+            window.location.href='#/logPainLevels';
+            return false;
+        }
+      }
+    </script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- your app's css -->
+    <link href="css/raleway.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="AppController" style="color:white;background-color:#454e58;">
+
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+    <script id="templates/0LoC.html" type="text/ng-template">
+      <ion-view>
+        <ion-header-bar class="bar-jastr">
+            <a class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <div class="row row-center gridRow">
+            <div class="col col-33 serviceTile gridBottom gridRight">
+              <img src="img/Heart-Rate.png">
+            </div>
+            <div class="col col-33 serviceTile gridBottom gridLeft gridRight">
+              <a href="#/syncing"><img src="img/helmet.png"></a>
+            </div>
+            <div class="col col-33 serviceTile gridBottom gridLeft">
+              <img src="img/Thermal.png">
+            </div>
+          </div>
+          <div class="row row-center gridRow">
+            <div class="col col-33 serviceTile gridTop gridBottom gridRight">
+              <img src="img/DNA.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridBottom gridLeft gridRight">
+              <img src="img/Pills.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridBottom gridLeft">
+              <img src="img/Water-Drop.png">
+            </div>
+          </div>
+          <div class="row row-center gridRow">
+            <div class="col col-33 serviceTile gridTop gridRight">
+              <img src="img/O2.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridLeft gridRight">
+              <img src="img/Clock.png">
+            </div>
+            <div class="col col-33 serviceTile gridTop gridLeft">
+              <img src="img/Notes.png">
+            </div>
+          </div>
+          <div class="row row-center gridRow">
+            <div class="col col-10">
+              <a class="navButtons ion-chevron-down"></a>
+            </div>
+            <div class="col">
+              <a class="navButtons ion-close"></a>
+            </div>
+            <div class="col col-10">
+              <a class="navButtons ion-chevron-up"></a>
+            </div>
+          </div>
+          <div class="tabs tabs-background-light" style="border: 0;">
+              <a class="tab-item active">0&deg;</a>
+              <a class="tab-item">1&deg;</a>
+              <a class="tab-item">2&deg;</a>
+              <a class="tab-item">3&deg;</a>
+              <a class="tab-item">4&deg;</a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/syncing.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/0LoC" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <a href="#/activityLevels">
+            <img src="img/syncing.png" style="width:90vw; margin:auto 5%; position:relative; top:50%; transform:translateY(-50%);">
+          </a>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/activityLevels.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-content>
+          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('img/activityLevels.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
+            <a href="#/notes" style="top:25vh; bottom:5vh; left:8vh; width:25vh; display:block; position:absolute;"></a>
+            <a href="#/syncing" style="height: 4vh; bottom:0; left:0; width:4vh; display:block; position:absolute;"></a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/notes.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/activityLevels" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Notes</p>
+          <textarea id="notesTextArea" type="text" rows="12" onkeypress="return detectEnter(event)" focus-me></textarea>
+          <a href="#/logPainLevels" class="button button-dark" style="margin:4vw; float:right; border-color:#2B2B2B;">Submit</a>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/logPainLevels.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/notes" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Pain Levels</p>
+          <p style="font-size: 135%; padding: 0; margin: 15px 0; vertical-align: middle; line-height: 30px;"><a class="titlePlusCircle"></a>Log pain Levels</p>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/sleepPatterns';">
+                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/sleepPatterns">Low</a>
+                <a href="#/sleepPatterns" class="ion-more"></a></p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/sleepPatterns';">
+                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/sleepPatterns">Med</a>
+                <a href="#/sleepPatterns" class="ion-more"></a></p>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-66">
+              <p class="logAdd" onclick="window.location.href='#/sleepPatterns';">
+                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/sleepPatterns">High</a>
+                <a href="#/sleepPatterns" class="ion-more"></a></p>
+            </div>
+            <div class="col"></div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/notes" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/sleepPatterns" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/sleepPatterns.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-content>
+          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('img/sleepPatterns.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
+            <a href="#/sleepVPainLevels" style="top:27vh; bottom:11vh; left:7vh; width:35vh; display:block; position:absolute;"></a>
+            <a href="#/logPainLevels" style="height: 4vh; bottom:0; left:0; width:3.5vh; display:block; position:absolute;"></a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/sleepVPainLevels.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/sleepPatterns" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Sleep v. Pain Levels</p>
+          <div class="row">
+            <div class="col col-80 col-offset-10">
+              <a href="#/progressTrends"><img src="img/sleepVPainLevels.png" style="width:100%;"></a>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/sleepPatterns" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/progressTrends" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/progressTrends.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <a href="#/effeciency" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a class="button button-clear button-light ion-navicon pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33" style="padding: 0;">
+              <img src="img/userImage-small.png" class="userImage">
+            </div>
+          </div>
+          <h4>John Doe</h4>
+          <p style="font-size: 135%;">Progress Trends</p>
+          <div class="row">
+            <div class="col col-80 col-offset-10"><img src="img/progressTrends.png" style="width:100%;"></div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/sleepVPainLevels" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/0LoC" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+  </body>
+</html>

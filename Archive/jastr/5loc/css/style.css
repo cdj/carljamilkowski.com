@@ -1,0 +1,154 @@
+body, .ionic-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .tab-item, input, button, select, textarea {
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+progress[value] {
+	/* Reset the default appearance */
+	-webkit-appearance: none;
+	--moz-appearance: none;
+	appearance: none;
+	border: none;
+
+	width: 100%;
+	height: 15px;
+}
+progress[value]::-webkit-progress-bar {
+	background-color: #1a3037;
+}
+progress[value]::-webkit-progress-value {
+	background-color: #00b1ac;
+}
+progress[value]::-moz-progress-bar {
+	background-color: #00b1ac;
+}
+
+progress {
+	margin: 30px 0;
+	background-color: #606972;
+}
+
+.serviceTile:hover, .serviceTile:active, .navButtons:hover, .navButtons:active {
+	background-color: #00b1ac;
+}
+.serviceTile {
+	position: relative;
+	padding: 0;
+	cursor: pointer;
+	margin: 0px !important;
+	border: 1px solid transparent;
+}
+.serviceTile:before{
+	content: "";
+	display: block;
+	padding: 50% 0; 	/* initial ratio of 1:1*/
+}
+.serviceTile img {
+	margin: auto;
+	display: block;
+	max-width: 33%;
+	max-height: 33%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.gridHorz {
+	border-bottom: 1px white solid;
+}
+.gridVert {
+	border-right: 1px white solid;
+}
+.gridRight {
+	border-right-color: white;
+}
+.gridLeft {
+	border-left-color: white;
+}
+.gridTop {
+	border-top-color: white;
+}
+.gridBottom {
+	border-bottom-color: white;
+}
+.gridTop.gridBottom {
+	margin-top: -1px !important;
+	margin-bottom: -1px !important;
+}
+.gridLeft.gridRight {
+	margin-left: -1px !important;
+	margin-right: -1px !important;
+}
+.gridRow {
+	width: 95%;
+	margin: 0 auto !important;
+}
+.gridRow div {
+	padding: 0;
+}
+.navButtons {
+	margin: 0 auto;
+	display: block;
+	padding: 5px !important;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 14px;
+	width: 24px;
+	text-align: center;
+}
+div.scroll {
+	height: 100%;
+}
+.tab-item, .tab-item:active, .tab-item:hover {
+	position: relative;
+	color: #A4A4A4;
+}
+.tab-item.active {
+	color: rgb(68, 68, 68);
+}
+.tab-item.active:after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	z-index: 1000;
+	border-top: 24px solid #001820;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	margin-left: -12px;
+}
+h1, h2 {
+	font-weight: 300;
+}
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 125%;
+}
+.tabs a {
+	font-size: 150%;
+}
+.row {
+	padding: 0;
+}
+.tabs {
+	padding: 0;
+	margin: 0;
+}
+.bar .button.button-clear .icon:before,
+.bar .button.button-clear.icon:before,
+.bar .button.button-clear.icon-left:before,
+.bar .button.button-clear.icon-right:before,
+.bar .button.button-icon .icon:before,
+.bar .button.button-icon:before,
+.bar .button.button-icon.icon-left:before,
+.bar .button.button-icon.icon-right:before {
+	font-size: 20px;
+	line-height: 20px;
+}
+.bar-dark, .nav-title-slide-ios7 {
+	height: 33px;
+}
+.has-header {
+	top: 34px;
+}

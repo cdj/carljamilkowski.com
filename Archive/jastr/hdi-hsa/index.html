@@ -1,0 +1,501 @@
+<html ng-app="HDI-HSA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Jastr HDI-HSA demo</title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- your app's css -->
+    <link href="css/raleway.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="AppController" style="color:white;background-color:#454e58;">
+
+    <!-- The nav bar that will be updated as we navigate -->
+    <ion-nav-bar class="bar-jastr" animation="nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear button-light ion-chevron-left pull-left">
+      </ion-nav-back-button>
+      <button class="button button-clear button-light ion-navicon pull-right" ui-sref=""></button>
+    </ion-nav-bar>
+
+    <ion-nav-view animation="no-animation"></ion-nav-view>
+
+    <script id="templates/home.html" type="text/ng-template">
+      <ion-view hide-back-button="true" hide-nav-bar="true">
+        <ion-header-bar class="bar-jastr">
+            <a href="" class="button button-clear button-light ion-navicon pull-left"></a>
+            <a href="" class="button button-clear button-light ion-gear-b pull-right"></a>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33">
+            </div>
+            <div class="col col-33">
+              <img src="img/userImage-small.png" style="width: 100%;">
+              <h4>John Doe<h4>
+            </div>
+            <div class="col col-33">
+            </div>
+          </div>
+          <div style="position:absolute;bottom:0;background-color: #9fa4a9;">
+                <p class="col" style="font-size: 37px;line-height: 37px; text-transform: uppercase;padding:15px;margin:0;font-weight:200;">Do you want to configure your health plan?</p>
+            <div class="row">
+              <div class="col"></div>
+              <div class="col col-33">
+                <a href="#/screen1" class="button button-block button-dark homeButton">Yes</a>
+              </div>
+              <div class="col"></div>
+              <div class="col col-33">
+                  <a class="button button-block button-dark homeButton">No</a>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen1" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen1.html" type="text/ng-template">
+      <ion-view drag-back>
+
+        <ion-content>
+          <div class="row row-center" style="padding-top: 20px;">
+            <div class="col col-10">
+              <a href="#/home"><img src="img/Large-Left-Arrow copy.png" style="width: 100%;"></a>
+            </div>
+            <div class="col col-80"><img src="img/userImage.png" style="width: 100%;"></div>
+            <div class="col col-10">
+              <a href="#/screen2"><img src="img/Large-Right-Arrow copy.png" style="width: 100%;"></a>
+            </div>
+          </div>
+          <div class="row">
+            <progress max="100" value="10"></progress>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-80"><img src="img/statCircles.png" style="max-width:100%;"></div>
+            <div class="col"></div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/home" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen2" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen2.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+            <h1 class="title">Benefits</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-top">
+            <div class="col col-10" style="margin-left: 8px; margin-top:50%;">
+              <div class="whiteCircleButton" style="background-image: url('img/Overview.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Small-Shield copy.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Savings.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Connected.png'); margin-top: 12px;"></div>
+            </div>
+            <div class="col" style="padding-top: 75px;">
+              <img src="img/screen2-barGraph.png" style="max-width: 100%; max-height: 100%;">
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen1" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen3" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen3.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Benefits</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-top">
+            <div class="col col-10" style="margin-left: 8px; margin-top:50%;">
+              <div class="whiteCircleButton" style="background-image: url('img/Overview.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Small-Shield copy.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Savings.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Connected.png'); margin-top: 12px;"></div>
+            </div>
+            <div class="col">
+              <img src="img/Light-Switch-White.png" style="width:23%; margin-left:14%;">
+              <img src="img/Light-Switch-White.png" style="width:23%;">
+              <img src="img/Light-Switch-White.png" style="width:23%;">
+              <p style="white-space: nowrap;">Coverage</p>
+              <img src="img/screen3-CoveragePieChart.png" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="col col-10">
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen2" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen4" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen4.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Risks</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center" style="padding-top: 20px;">
+            <div class="col col-10">
+              <a href="#/screen3"><img src="img/Large-Left-Arrow copy.png" style="width: 100%;"></a>
+            </div>
+            <div class="col col-80"><img src="img/userImage.png" style="width: 100%;"></div>
+            <div class="col col-10">
+              <a href="#/screen5"><img src="img/Large-Right-Arrow copy.png" style="width: 100%;"></a>
+            </div>
+          </div>
+          <div class="row">
+            <progress max="100" value="67"></progress>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-80"><img src="img/screen4-statCircles.png" style="max-width:100%;"></div>
+            <div class="col"></div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen3" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen5" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen5.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Risks</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center" style="padding-top: 10px;">
+            <div class="col">
+            </div>
+            <div class="col col-67"><img src="img/userImage.png" style="width: 100%;"></div>
+            <div class="col">
+            </div>
+          </div>
+          <div class="row" style="margin-top:10px;">
+            <div class="col">
+              <p style="font-size: 17px;">Recommended Actions</p>
+            </div>
+          </div>
+          <div class="row row-center">
+            <div class="col col-20">
+              <div class="statCircleButton" style="margin:0;background-image: url('img/DNA.png');"><div class="statCircleButtonInner"></div></div>
+            </div>
+            <div class="col">
+                  <p class="dataDescripton">10% Risk of Genetic Pre-Diabetes</p>
+                  <progress max="100" value="10" style="height:12px;margin:0;"></progress>
+                  <p class="dataDescripton">&nbsp;</p>
+            </div>
+            <div class="col col-10">
+            </div>
+          </div>
+          <div class="row row-center" style="margin-top:-8px;">
+            <div class="col col-20" style="margin-left:15%;">
+              <div class="statCircleButton" style="margin:0;background-image: url('img/Full-Location.png');"><div class="statCircleButtonInner"></div></div>
+            </div>
+            <div class="col">
+                  <p class="dataDescripton">Current location has a 20%</p>
+                  <progress max="100" value="20" style="height:12px;margin:0;"></progress>
+                  <p class="dataDescripton">population base of diabetes</p>
+            </div>
+            <div class="col col-10">
+            </div>
+          </div>
+          <div class="row row-center" style="margin-top:-8px;">
+            <div class="col col-20">
+              <div class="statCircleButton" style="margin:0;background-image: url('img/Solo-User.png');"><div class="statCircleButtonInner"></div></div>
+            </div>
+            <div class="col">
+                  <p class="dataDescripton">Personal habits increase risk by 50%</p>
+                  <progress max="100" value="50" style="height:12px;margin:0;"></progress>
+                  <p class="dataDescripton">when not exercising and eating poorly.</p>
+            </div>
+            <div class="col col-10">
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen4" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen6" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen6.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Anonymized Data</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row">
+            <div class="col col-50 col-offset-25">
+              <img src="img/Anonymized-Data.png" style="width:100%">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-80">
+              <div class="row row-top smallText">
+                <div class="col col-33">
+                  <div class="statCircleButton" style="background-image: url('img/DNA.png');"><div class="statCircleButtonInner"></div></div>
+                </div>
+                <div class="col col-33">
+                  <div class="statCircleButton" style="background-image: url('img/Full-Location.png');"><div class="statCircleButtonInner"></div></div>
+                </div>
+                <div class="col col-33">
+                  <div class="statCircleButton" style="background-image: url('img/Solo-User.png');"><div class="statCircleButtonInner"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col" style="margin-bottom:30px;">
+              <p class="dataDescripton">40% of users with similar genetics are at risk.</p>
+              <progress max="100" value="40" style="height:12px;margin:0;"></progress>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" style="margin-bottom:30px;">
+              <p class="dataDescripton">50% of users in your location are at risk.</p>
+              <progress max="100" value="50" style="height:12px;margin:0;"></progress>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p class="dataDescripton">80% of users with similar habits are at risk.</p>
+              <progress max="100" value="80" style="height:12px;margin:0;"></progress>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen5" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen7" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen7.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Anonymized Data</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row">
+            <div class="col col-50 col-offset-25">
+              <img src="img/Anonymized-Data.png" style="width:100%">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-80">
+              <div class="row row-top smallText">
+                <div class="col col-33">
+                  <div class="statCircleButton" style="background-image: url('img/DNA.png');"><div class="statCircleButtonInner"></div></div>
+                </div>
+                <div class="col col-33">
+                  <div class="statCircleButton" style="background-image: url('img/Full-Location.png');"><div class="statCircleButtonInner"></div></div>
+                </div>
+                <div class="col col-33">
+                  <div class="statCircleButton" style="background-image: url('img/Solo-User.png');"><div class="statCircleButtonInner"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col col-80 col-offset-10">
+              <img src="img/screen7-userTrends.png" style="width:100%;">
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen6" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen8" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen8.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Genetics</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-center" style="margin: 3vh 0 2vh 0; ">
+            <div class="col" style="margin: 0 6.5vw;">
+              <a href="#/screen7"><img src="img/Large-Left-Arrow copy.png" style="width: 100%;"></a>
+            </div>
+            <div class="col col-50"><div class="whiteCircleButton" style="background-image: url('img/DNA.png'); background-color: #00b1ac; border-width: 10px; background-size: 45%;"></div></div>
+            <div class="col" style="margin: 0 6.5vw;">
+              <a href="#/screen9"><img src="img/Large-Right-Arrow copy.png" style="width: 100%;"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p style="font-size: 17px; margin-bottom: 5vh;">Direct Costs</p>
+            </div>
+          </div>
+          <div class="row row-top" style="margin: 0 5%;">
+            <div class="col col-10" style="padding: 0;">
+              <div class="whiteCircleButton" style="background-image: url('img/Overview.png'); margin-top: 4.3vh;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Small-Shield copy.png'); margin-top: 3vh;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Savings.png'); margin-top: 3vh;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Connected.png'); margin-top: 3vh;"></div>
+            </div>
+            <div class="col col-80" style="padding-left: 5%;">
+              <img src="img/screen8-costs.png" style="max-width: 100%; max-height: 100%;">
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen7" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen9" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen9.html" type="text/ng-template">
+      <ion-view drag-back>
+        <ion-header-bar class="bar-jastr">
+          <h1 class="title">Health Plan</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="row row-top">
+            <div class="col col-80 col-offset-10">
+              <img src="img/screen9-barChart.png" style="max-width: 100%; max-height: 100%;">
+            </div>
+          </div>
+          <div class="row row-top" style="margin: 0 15px;">
+            <div class="col col-10">
+              <div class="whiteCircleButton" style="background-image: url('img/Overview.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Small-Shield copy.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Savings.png'); margin-top: 12px;"></div>
+              <div class="whiteCircleButton" style="background-image: url('img/Connected.png'); margin-top: 12px;"></div>
+            </div>
+            <div class="col col-80">
+              <div class="row row-top" style="padding: 0 25px">
+                <div class="col col-50" style="padding: 0 20px">
+                  <div class="whiteCircleButton" style="background-image: url('img/Blood copy.png'); margin: 15px 0;"></div>
+                  <p class="healthPlanTitles">Blood Testing</p>
+                </div>
+                <div class="col col-50" style="padding: 0 20px">
+                  <div class="whiteCircleButton" style="background-image: url('img/Meals.png');  margin: 15px 0;"></div>
+                  <p class="healthPlanTitles">Food & Diet</p>
+                </div>
+              </div>
+              <div class="row row-top" style="padding: 0 25px">
+                <div class="col col-50" style="padding: 0 20px">
+                  <div class="whiteCircleButton" style="background-image: url('img/Weights.png'); margin: 15px 0;"></div>
+                  <p class="healthPlanTitles">Exercise</p>
+                </div>
+                <div class="col col-50" style="padding: 0 20px">
+                  <div class="whiteCircleButton" style="background-image: url('img/Pills copy.png'); margin: 15px 0;"></div>
+                  <p class="healthPlanTitles">Meds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen8" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/screen10" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen10.html" type="text/ng-template">
+      <ion-view drag-back hide-nav-bar="true">
+        <ion-content>
+          <div class="col" style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('img/Savings-w-buttons.png'); background-repeat: no-repeat; background-size: auto 100%; background-position: left center;">
+            <a href="#/screen11" style="position: absolute; bottom: 12vh; left: 2vh; height: 67vh; width: 38vh; margin-left: 1vh;"></a>
+            <a href="#/screen11" style="position: absolute; bottom: 3vh; left: 11vh; height: 4.5vh; width: 20vh; margin-left: 1vh;"></a>
+            <a href="#/screen9" class="button-clear button-light ion-chevron-down" style="font-size: 3vh; bottom:0; left:0; width:4vh; display:block; position:absolute;"></a>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/screen11.html" type="text/ng-template">
+      <ion-view drag-back>
+
+        <ion-content>
+          <div class="row row-center">
+            <div class="col col-33 col-offset-33">
+              <img src="img/userImage-small.png" style="width: 100%;">
+            </div>
+          </div>
+          <div>
+            <p style="font-size: 150%; white-space: nowrap; text-transform: uppercase;padding-bottom: 0; text-align: left; margin: auto; text-align: center;"><img src="img/Plus Circle copy.png" style="width:20%; vertical-align: middle;">Benefit Addition</p>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col col-20">
+              <img src="img/Light-Switch-White.png" style="width:100%;">
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col col-80 col-offset-10">
+              <h2>Summary</h2>
+              <ul style="white-space: nowrap;margin: 0 0 15% 5%;list-style-type:disc;text-transform: uppercase;">
+                <li>Pre-Diabetes Genetic Testing</li>
+                <li>Long-Term Health Management</li>
+                <li>Monthly Compliance Savings</li>
+                <li>Wearable Device Connectivity</li>
+                <li>Automatic Tax Deductible Savings</li>
+              </ul>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar class="bar-jastr">
+            <a href="#/screen10" class="button button-clear button-light ion-chevron-left pull-left"></a>
+            <a href="#/end" class="button button-clear button-light ion-chevron-right pull-right"></a>
+        </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/end.html" type="text/ng-template">
+      <ion-view drag-back>
+
+        <ion-content>
+          <div class="row">
+            <div class="col col-80 col-offset-10">
+              <div class="whiteCircleButton" style="background-image: url('img/JASTR.png'); margin-top:25%; margin-bottom: 20px" onclick="window.location='#/home';"></div>
+              <p style="font-size: 230%;font-weight:100;letter-spacing: 1px;">Complete</p>
+            </div>
+          <div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,436 @@
+body, .ionic-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .tab-item, input, button, select, textarea {
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+progress[value] {
+	/* Reset the default appearance */
+	-webkit-appearance: none;
+	--moz-appearance: none;
+	appearance: none;
+	border: none;
+
+	width: 100%;
+	height: 15px;
+}
+progress[value]::-webkit-progress-bar {
+	background-color: #606972;
+}
+progress[value]::-webkit-progress-value {
+	background-color: #00b1ac;
+}
+progress[value]::-moz-progress-bar {
+	background-color: #00b1ac;
+}
+
+progress {
+	margin: 30px 0;
+	background-color: #606972;
+}
+
+input, textarea {
+	background-color: #666d75 !important;
+	width: 100%;
+	padding: 5%;
+	height: 224px;
+}
+
+.serviceTile:hover, .serviceTile:active, .navButtons:hover, .navButtons:active {
+	background-color: #00b1ac;
+}
+.serviceTile {
+	position: relative;
+	padding: 0;
+	cursor: pointer;
+	margin: 0px !important;
+	border: 1px solid transparent;
+}
+.serviceTile:before{
+	content: "";
+	display: block;
+	padding: 50% 0; 	/* initial ratio of 1:1*/
+}
+.serviceTile img {
+	margin: auto;
+	display: block;
+	max-width: 33%;
+	max-height: 33%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.serviceTile a {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.gridHorz {
+	border-bottom: 1px white solid;
+}
+.gridVert {
+	border-right: 1px white solid;
+}
+.gridRight {
+	border-right-color: white;
+}
+.gridLeft {
+	border-left-color: white;
+}
+.gridTop {
+	border-top-color: white;
+}
+.gridBottom {
+	border-bottom-color: white;
+}
+.gridTop.gridBottom {
+	margin-top: -1px !important;
+	margin-bottom: -1px !important;
+}
+.gridLeft.gridRight {
+	margin-left: -1px !important;
+	margin-right: -1px !important;
+}
+.navButtons {
+	margin: 0 auto;
+	display: block;
+	padding: 5px !important;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 14px;
+	width: 24px;
+	text-align: center;
+}
+div.scroll {
+	height: 100%;
+}
+.tab-item, .tab-item:active, .tab-item:hover {
+	position: relative;
+	color: #A4A4A4;
+}
+.tab-item.active {
+	color: rgb(68, 68, 68);
+}
+.tab-item.active:after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	z-index: 1000;
+	border-top: 24px solid #4f5963;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	margin-left: -12px;
+}
+html {
+	min-height: 100%;
+}
+body {
+	background: #454e58; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE1MTkxZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1NDVmNjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #15191f 0%, #545f69 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#15191f), color-stop(100%,#545f69)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #15191f 0%,#545f69 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #15191f 0%,#545f69 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #15191f 0%,#545f69 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #15191f 0%,#545f69 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15191f', endColorstr='#545f69',GradientType=0 ); /* IE6-8 */
+}
+a:link, a:active, a:visited, a:hover {
+    color: white;
+    text-decoration: none;
+}
+h1, h2 {
+	font-weight: 300;
+	text-transform: uppercase;
+	color:white;
+	text-align: center;
+}
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 125%;
+}
+h2 {
+	font-size: 100%;
+	font-weight: 500;
+}
+h4 {
+	color:white;
+	text-align: center;
+	font-size: 100%;
+	margin: 3px 0;
+}
+p {
+	text-transform: uppercase;
+	text-align: center;
+}
+li {
+	margin: 8px 0;
+}
+.userImage {
+	width: 100%;
+	padding: 0 10px;
+}
+.gridRow {
+	width: 95%;
+	margin: 0 auto !important;
+}
+.gridRow div {
+	padding: 0;
+}
+.smallText {
+	font-size: 85%;
+	font-weight: 300;
+}
+.dataDescripton {
+	text-align: left;
+	margin: 0;
+	font-size: 70%;
+	font-weight: 300;
+}
+.healthPlanTitles {
+	font-size: 12px;
+	font-weight: 200;
+}
+.tabs a {
+	font-size: 150%;
+}
+.row {
+	padding: 0;
+}
+.tabs {
+	padding: 0;
+	margin: 0;
+}
+.bar .button.button-clear .icon:before,
+.bar .button.button-clear.icon:before,
+.bar .button.button-clear.icon-left:before,
+.bar .button.button-clear.icon-right:before,
+.bar .button.button-icon .icon:before,
+.bar .button.button-icon:before,
+.bar .button.button-icon.icon-left:before,
+.bar .button.button-icon.icon-right:before,
+.bar-dark .button.button-clear {
+	font-size: 20px;
+	line-height: 20px;
+}
+.bar-dark, .nav-title-slide-ios7, .bar-header {
+	height: 33px;
+}
+.has-header {
+	top: 34px;
+}
+.whiteCircleButton:before{
+	content: "";
+	display: block;
+	padding: 50% 0;
+}
+.whiteCircleButton {
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	background-repeat: no-repeat;
+	background-size: 65%;
+    background-position: center;
+}
+.titlePlusCircle {
+	background-image: url('../img/plus.png');
+	/*float:left;*/
+	display: inline-block;
+	clear:left;
+	width:30px;
+	height:30px;
+	margin:0 10px 0 0 !important;
+	padding:0 !important;
+	background-size: 66% !important;
+	background-position: center !important;
+	padding: 0;
+	vertical-align: middle;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	background-repeat: no-repeat;
+}
+.whiteCircleButton.logAdd:before{
+	display: initial !important;
+}
+.whiteCircleButton.logAdd {
+	float:left;
+	width:6.3vw;
+	height:6.3vw;
+	margin:0;
+	line-height:6.3vw;
+	background-size: 66% !important;
+	background-position: center !important;
+}
+p.logAdd {
+	font-size:4vw;
+	background-color:#838990;
+	border-radius:3.2vw;
+	border-style:none;
+	line-height:6.3vw;
+	width:100%;
+	margin: 15px 0;
+	cursor: pointer;
+}
+.logAdd .ion-more {
+	float:right;
+	font-size:6.4vw;
+	margin-right:1.2vw;
+}
+.statCircleButton:before{
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+.statCircleButton {
+	position: relative;
+	border-radius: 50%;
+	border-style: none;
+	background-repeat: no-repeat;
+	background-size: 40%;
+    background-position: center;
+    border-color: rgba(76,103,112,0.25);
+    background-color: rgba(0,177,172,0.25);
+    margin: 8px;
+}
+.statCircleButtonInner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+    background-color: transparent;
+    border-color: #030505;
+    margin: 5%;
+}
+.homeButton {
+	text-transform: uppercase;
+	font-size: 180%;
+	height: 60px;
+	background-color: #9fa4a9 !important;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin: 15px 0 !important;
+}
+.vertical {
+	-ms-transform: translate(0px,115%) rotate(270deg); /* IE 9 */
+    -ms-transform-origin: 0% 0%; /* IE 9 */
+    -webkit-transform: translate(0px,115%) rotate(270deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: left top; /* Chrome, Safari, Opera */
+    transform: translate(0px,115%) rotate(270deg);
+    transform-origin: left top;
+    white-space: nowrap;
+    float: left;
+}
+.verticalNav {
+	-ms-transform: translate(0px,75%) rotate(270deg); /* IE 9 */
+	-ms-transform-origin: 0% 0%; /* IE 9 */
+	-webkit-transform: translate(0px,75%)  rotate(270deg); /* Chrome, Safari, Opera */
+	-webkit-transform-origin: left top; /* Chrome, Safari, Opera */
+	transform: translate(0px,75%) rotate(270deg);
+	transform-origin: left top;
+}
+
+div.userImage {
+	padding: 0 5px;
+}
+
+.userImage img {
+	width: 100%;
+}
+
+.bar-jastr {
+    border-style: none !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    background-color: transparent !important;
+    height: 30px !important;
+}
+
+.bar-jastr .title {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 0;
+	overflow: hidden;
+	margin: 0 10px;
+	min-width: 30px;
+	height: 30px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 17px;
+	line-height: 30px !important;
+	vertical-align: middle !important;
+}
+
+.bar-jastr a {
+	border: none !important;
+	line-height: 30px !important;
+	vertical-align: middle !important;
+	height: 30px !important;
+}
+
+.bar {
+	padding: 0 5px !important;
+}
+
+
+
+/**
+ * Overriding ionic css
+ * --------------------------------------------------
+ */
+
+ion-view, ion-header-bar, ion-content, ion-footer-bar, .bar-footer, .bar-header, bar {
+	background-color:transparent !important;
+    border-style: none !important;
+    border-width: 0 !important;
+    background-image: none !important;
+	vertical-align: middle !important;
+}
+
+ion-content.has-header {
+	top: 30px;
+}
+
+ion-content.has-footer {
+	bottom: 30px;
+}
+
+/* Ionic Icons */
+.button.ion-chevron-left, .button.ion-chevron-right {
+	padding: 6px 0 !important;
+	font-size: 18px !important;
+}
+.button.ion-gear-b {
+	font-size: 22px !important;
+	padding: 4px 0;
+}
+.button.ion-navicon {
+	font-size: 26px !important;
+	padding: 2px 0;
+}
+.button.pull-right, .button.pull-left {
+	top: 0 !important;
+	bottom: 0 !important;
+}
+.button:after {
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+}
