@@ -387,6 +387,29 @@ a, a:hover, a:active {
     font-weight: bold;
 }
 
+#skills .primary,
+#skills .secondary {
+    height: 100px;
+    position: relative;
+}
+#skills .primary > div {
+    position: absolute;
+    bottom: 0;
+}
+#skills .primary .skill {
+    height: 0;
+    width: 30px;
+    margin-right: 4px;
+    background-color: lightgray;
+    display: inline-block;
+    /*float: left;*/
+    /*bottom: 0;*/
+    vertical-align: bottom;
+}
+#skills .secondary .skill {
+    display: none;
+}
+
 
 @media (max-width: 750px) {
     #intro.section {
