@@ -1,3 +1,5 @@
+var isTitleSticky = false;
+
 $(window).resize(titleBarCheck).scroll(titleBarCheck);
 
 $(document).ready(function(){
@@ -7,9 +9,9 @@ $(document).ready(function(){
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 4000
+        cssEase: 'linear'//,
+        // autoplay: true,
+        // autoplaySpeed: 4000
     });
 
     $("a.local").click(function(e) {
@@ -18,13 +20,21 @@ $(document).ready(function(){
 
         $('html, body').animate({scrollTop: newScrollTop}, 200);
     });
+
+    titleBarCheck();
 });
 
 function titleBarCheck() {
     var $title = $("#title");
-    if($title.hasClass("sticky") && $(this).scrollTop() < ($(this).height()-$title.height())/2) {
-        $title.removeClass("sticky");
-    } else if($(this).scrollTop() > $title.offset().top) {
-        $title.addClass("sticky");
+    if($(this).scrollTop() < ($(this).height()*0.3-$title.height()/2)) {
+        if(isTitleSticky) {
+            isTitleSticky = false;
+            $title.parent().removeClass("sticky");
+        }
+    } else if($(this).scrollTop() >= $title.offset().top) {
+        if(!isTitleSticky) {
+            isTitleSticky = true;
+            $title.parent().addClass("sticky");
+        }
     }
 }
