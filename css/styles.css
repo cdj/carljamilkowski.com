@@ -424,6 +424,9 @@ a, a:hover, a:active {
 #skills .primary,
 #skills .secondary {
     position: relative;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 #skills .primary {
     height: 200px;

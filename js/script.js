@@ -100,7 +100,6 @@ function animateSecondarySkillBars(priSkill) {
     var $secSkills = $priSkill.children('.sub-skill');
 
     $priSkill.show();
-    $("#skills .primary .skill[data-skill='"+$priSkill.attr('data-skill')+"'");
 
     // animate bars to their appropriate relative height
     for(var i = 0; i < $secSkills.length; i++) {
