@@ -1,5 +1,7 @@
 var isTitleSticky = false;
 var topSkillLevel;
+var topSecSkillLevel;
+var selectedPrimarySkill;
 
 $(window).resize(titleBarCheck).scroll(titleBarCheck);
 
@@ -29,8 +31,20 @@ $(document).ready(function(){
         var $secSkills = $priSkill.children('.sub-skill');
 
         for(var j = 0; j < $secSkills.length; j++) {
-            $secSkills.eq(j).css('background-color', rainbow(j/$secSkills.length*100));
+            var color = rainbow(j/$secSkills.length*100);
+            var matchColors = /rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)/;
+            var match = matchColors.exec(color);
+            var blue = parseInt(match[3], 10);
+            var green = parseInt(match[2], 10);
+            $secSkills.eq(j).css({'background-color': color, 'color': (blue > 200 && green < 210 ? "white" : "")});
         }
+
+        $(this).click(function() {
+            $("#skills .click-me").remove();
+            $("#skills .primary .skill.selected").not(this).removeClass("selected");
+            $(this).addClass("selected");
+            raiseSecondarySkillBars($(this).attr('data-skill'));
+        });
     });
 });
 
@@ -55,7 +69,6 @@ function titleBarCheck() {
 
 function raisePrimarySkillBars() {
     var $priSkills = $("#skills .primary .skill");
-    var maxHeight = $("#skills .primary").height();
 
     $("#skills .primary").addClass('raised');
     topSkillLevel = 0;
@@ -73,21 +86,35 @@ function raisePrimarySkillBars() {
         
         setTimeout(function() {
             var thisSkillLevel = parseInt($(this).attr('data-level'), 10);
+            var maxHeight = $("#skills .primary").height();
             $(this).animate({height: (Math.floor(thisSkillLevel/topSkillLevel*$("#skills .primary").height()) + "px")});
         }.bind($priSkills.eq(i)[0]), (i * 100));
     }
 }
 
-function raiseSecondarySkillBars(primarySkill) {
-    var $priSkill = $("#skills .secondary .skill[data-skill='"+primarySkill+"']");
-    var $secSkills = $priSkills.children('.sub-skill');
-    var topSecSkillLevel = 0;
+function animateSecondarySkillBars(priSkill) {
+    var $priSkill = $(priSkill);
+    var $secSkills = $priSkill.children('.sub-skill');
 
-    // make already showing secondary skills go away
-    if($priSkill.is(":visible")) return;
-    else $("#skills .secondary:visible").hide();
+    $priSkill.show();
+    $("#skills .primary .skill[data-skill='"+$priSkill.attr('data-skill')+"'");
+
+    // animate bars to their appropriate relative height
+    for(var i = 0; i < $secSkills.length; i++) {
+        setTimeout(function() {
+            var thisSkillLevel = parseInt($(this).attr('data-level'), 10);
+            var maxHeight = $("#skills .secondary").height();
+            $(this).animate({height: Math.floor(thisSkillLevel/topSecSkillLevel*maxHeight) + "px"});
+        }.bind($secSkills.eq(i)[0]), (i * 100));
+    }
+}
+
+function raiseSecondarySkillBars(primarySkill) {
+    $selectedPrimarySkill = $("#skills .secondary .skill[data-skill='"+primarySkill+"']");
+    var $secSkills = $selectedPrimarySkill.children('.sub-skill');
 
     // find the greatest skill level in the set
+    topSecSkillLevel = 0;
     for(var i = 0; i < $secSkills.length; i++) {
         var thisSkillLevel = parseInt($secSkills.eq(i).attr('data-level'), 10);
         if(thisSkillLevel > topSecSkillLevel) {
@@ -95,14 +122,19 @@ function raiseSecondarySkillBars(primarySkill) {
         }
     }
 
-    $priSkill.show();
+    // make already showing secondary skills go away
+    if($selectedPrimarySkill.is(":visible")) return;
+    else {
+        var $visible = $("#skills .secondary .skill:visible");
 
-    // animate bars to their appropriate relative height
-    for(var i = 0; i < $secSkills.length; i++) {
-        var thisSkillLevel = parseInt($secSkills.eq(i).attr('data-level'), 10);
-        setTimeout(function() {
-            $secSkills.eq(i).animate({height: Math.floor(thisSkillLevel/topSecSkillLevel*maxHeight) + "px"});
-        }, (i * 75));
+        if($visible.length > 0) {
+            $("#skills .secondary .skill:visible").fadeOut(400, function() {
+                $("#skills .secondary .sub-skill").css('height', '');
+                animateSecondarySkillBars($selectedPrimarySkill);
+            });
+        } else {
+            animateSecondarySkillBars($selectedPrimarySkill);
+        }
     }
 }
 

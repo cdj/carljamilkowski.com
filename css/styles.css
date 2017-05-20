@@ -387,24 +387,97 @@ a, a:hover, a:active {
     font-weight: bold;
 }
 
+#skills .click-me {
+    width: 125px;
+    margin-left: 23px;
+    animation: shake 1.5s cubic-bezier(.36,.07,.19,.97) both;
+    animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0) rotate(0.5deg);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0) rotate(-1.2deg);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0) rotate(0.5deg);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0) rotate(-1.4deg);
+  }
+}
 #skills .primary,
 #skills .secondary {
-    height: 100px;
     position: relative;
+}
+#skills .primary {
+    height: 200px;
+    margin-bottom: 10px;
+}
+#skills .secondary {
+    height: 310px;
 }
 #skills .primary > div {
     position: absolute;
     bottom: 0;
 }
-#skills .primary .skill {
+#skills .primary .skill,
+#skills .secondary .sub-skill {
     height: 0;
-    width: 30px;
-    margin-right: 4px;
+    width: 35px;
+    margin-right: 7px;
     background-color: lightgray;
     display: inline-block;
-    /*float: left;*/
-    /*bottom: 0;*/
     vertical-align: bottom;
+    position: relative;
+    overflow: hidden;
+}
+#skills .primary .skill:last-child,
+#skills .secondary .sub-skill:last-child {
+    margin-right: 0;
+}
+#skills .primary .skill {
+    cursor: pointer;
+    -webkit-transition: background-color 250ms ease-out;
+    -moz-transition: background-color 250ms ease-out;
+    -o-transition: background-color 250ms ease-out;
+    transition: background-color 250ms ease-out;
+}
+#skills .primary .skill.selected {
+    background-color: #3f51b5;
+    color: white;
+    cursor: default;
+}
+#skills .secondary .sub-skill {
+    vertical-align: top;
+}
+#skills .primary .skill > div,
+#skills .secondary .sub-skill > div {
+    position: absolute;
+    left: 0;
+    transform-origin: top left;
+    white-space: nowrap;
+}
+#skills .primary .skill > div {
+    -moz-transform: translate(8px,100%) translateY(-5px) rotate(-90deg);
+    -o-transform: translate(8px,100%) translateY(-5px) rotate(-90deg);
+    -webkit-transform: translate(8px,100%) translateY(-5px) rotate(-90deg);
+    transform: translate(8px,100%) translateY(-5px) rotate(-90deg);
+    bottom: 0;
+}
+#skills .secondary .sub-skill > div {
+    -moz-transform: rotate(-90deg) translate(-100%,8px) translateX(-5px);
+    -o-transform: rotate(-90deg) translate(-100%,8px) translateX(-5px);
+    -webkit-transform: rotate(-90deg) translate(-100%,8px) translateX(-5px);
+    transform: rotate(-90deg) translate(-100%,8px) translateX(-5px);
+    top: 0;
 }
 #skills .secondary .skill {
     display: none;
