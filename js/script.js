@@ -2,6 +2,7 @@ var isTitleSticky = false;
 var topSkillLevel;
 var topSecSkillLevel;
 var selectedPrimarySkill;
+var hasRaisedPrimarySkillBars = false;
 
 $(window).resize(titleBarCheck).scroll(titleBarCheck);
 
@@ -61,8 +62,7 @@ function titleBarCheck() {
             $title.parent().addClass("sticky");
         }
     }
-    if($("#skills .primary").hasClass('raised')) return;
-    if(($(this).scrollTop()+$(this).height()) >= $("#skills .secondary").offset().top) {
+    if(!hasRaisedPrimarySkillBars && ($(this).scrollTop()+$(this).height()) >= $("#skills .secondary").offset().top) {
         raisePrimarySkillBars();
     }
 }
@@ -70,7 +70,7 @@ function titleBarCheck() {
 function raisePrimarySkillBars() {
     var $priSkills = $("#skills .primary .skill");
 
-    $("#skills .primary").addClass('raised');
+    hasRaisedPrimarySkillBars = true;
     topSkillLevel = 0;
 
     // find the greatest skill level in the set
@@ -90,6 +90,9 @@ function raisePrimarySkillBars() {
             $(this).animate({height: (Math.floor(thisSkillLevel/topSkillLevel*$("#skills .primary").height()) + "px")});
         }.bind($priSkills.eq(i)[0]), (i * 100));
     }
+    setTimeout(function() {
+        $("#skills .click-me").addClass('visible');
+    }, ($priSkills.length * 100));
 }
 
 function animateSecondarySkillBars(priSkill) {

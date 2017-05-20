@@ -395,6 +395,14 @@ a, a:hover, a:active {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
+    opacity: 0;
+    -webkit-transition: opacity 750ms ease-out;
+    -moz-transition: opacity 750ms ease-out;
+    -o-transition: opacity 750ms ease-out;
+    transition: opacity 750ms ease-out;
+}
+#skills .click-me.visible {
+    opacity: 1;
 }
 @keyframes shake {
   10%, 90% {
