@@ -330,36 +330,180 @@ a, a:hover, a:active {
     float: left;
     margin: 0 10px;
 }
+.psect .question.prompt {
+    display: inline-block;
+    margin: 10px;
+    padding: 1.5em 10px 0 10px;
+}
+.psect .question.prompt > * {
+    margin: auto;
+}
+.psect .question.prompt h4 {
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.psect .question.prompt .sxs > div {
+    margin: 0;
+    width: 33%;
+    font-size: 18px;
+}
+.psect .question.prompt .sxs h4 {
+    text-decoration: underline;
+    font-size: 20px;
+}
 
-.prompt {
+.prompt,
+.psect .brainstorm .idea {
     text-align: center;
     margin: 0 auto;
     max-width: 380px;
     background-color: lightgray;
     border-radius: 10px;
     padding: 8px;
+    background-color: #A8EA60; /*yellow;*/
+    border-radius: 0;
+    height: 325px;
+    width: 325px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 26px;
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -moz-box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.80);
+    box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.80);
 }
-.prompt::before {
-    content: 'Prompt:';
-    display: block;
-    margin: 0 0 0.5em 0;
-    font-weight: bold;
+.prompt {
+    margin-bottom: 30px;
 }
-.brainstorm {
+.prompt h3 {
+    line-height: 1;
+}
+.prompt > * {
+    margin: 1em 0;
+}
+.psect .brainstorm {
+    text-align: center;
     border: 1px dashed darkblue;
     border-radius: 10px;
     padding: 10px;
     /*float: left;
     clear: both;*/
-    font-family: 'Shadows Into Light', cursive;
-    font-family: 'Gloria Hallelujah', cursive;
+    /*font-family: 'Shadows Into Light', cursive;
+    font-family: 'Gloria Hallelujah', cursive;*/
+    -webkit-transition: max-height 2s ease-out;
+    -moz-transition: max-height 2s ease-out;
+    -o-transition: max-height 2s ease-out;
+    transition: max-height 2s ease-out;
+    max-height: 3500px;
 }
-.brainstorm::before {
+@media (min-width: 1100px) {
+    .psect .brainstorm {
+        padding-top: 75px;
+    }
+}
+.psect .brainstorm.collapsed,
+.psect .synthesis.collapsed {
+    max-height: 585px;
+    position: relative;
+    overflow: hidden;
+}
+/*.brainstorm::before {
     content: 'Brainstorm:';
     display: block;
     margin: 1em 0;
     font-weight: bold;
+}*/
+.psect .brainstorm .title {
+    max-width: 100%;
+    width: 310px;
 }
+.psect .brainstorm .expander,
+.psect .synthesis .expander {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    cursor: pointer;
+    background-color: lightgrey;
+    font-size: 22px;
+    line-height: 1;
+    padding: 7px 14px 0 14px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: pulse 1600ms;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  50% {
+    background-color: #9e9e9e;
+  }
+}
+.psect .brainstorm .expander:hover {
+    background-color: #9e9e9e;
+    color: #3f51b5;
+    animation: none;
+}
+.psect .brainstorm .idea:nth-child(2n) {
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+}
+.psect .brainstorm .idea:nth-child(3n) {
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+.psect .brainstorm .idea:nth-child(4n) {
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+.psect .brainstorm .idea {
+    min-height: 300px;
+    height: 300px;
+    width: 300px;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 16px;
+    margin-right: 15px;
+}
+@media (max-width: 994px) {
+    .psect .brainstorm .idea:nth-child(even) {
+        margin-right: 0;
+    }
+}
+@media (max-width: 668px) {
+    .psect .brainstorm .idea {
+        margin-right: 0;
+    }
+}
+.psect .brainstorm .idea:nth-child(odd) {
+    background-color: #4F83C1;
+}
+.psect .brainstorm .idea:nth-child(even) {
+    background-color: #8574D0;
+}
+.psect .brainstorm .idea p,
+.psect .brainstorm .idea li {
+    font-size: 18px;
+}
+/*.prompt::before {
+    content: 'Prompt:';
+    display: block;
+    margin: 0.5em 0;
+    font-weight: bold;
+}*/
 .brainstorm h1,
 .brainstorm h2,
 .brainstorm h3,
@@ -368,13 +512,68 @@ a, a:hover, a:active {
     font-family: 'Permanent Marker', cursive;
     margin-top: 0;
 }
-.synthesis {
+.psect .brainstorm .question,
+.psect .brainstorm.question {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.psect .brainstorm .question.list {
+    width: 450px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.psect .brainstorm .question.list p {
+    text-align: left;
+}
+.psect .synthesis {
     padding: 10px;
     /*float: left;
     clear: both;*/
     background-color: lightgray;
+    margin: 15px;
+    -webkit-transition: max-height 2s ease-out;
+    -moz-transition: max-height 2s ease-out;
+    -o-transition: max-height 2s ease-out;
+    transition: max-height 2s ease-out;
+    max-height: 2000px;
 }
-.synthesis::before {
+.psect .feedback {
+    padding: 10px;
+    background-color: #d5e0ff;
+    margin: 15px;
+}
+.psect blockquote {
+    position: relative;
+}
+.psect blockquote:before,
+.psect blockquote:after {
+    display: block;
+    position: absolute;
+    height: 0;
+    content: "“";
+    color: #999;
+    font-size: 55px;
+    top: -14px;
+    left: -21px;
+}
+.psect blockquote:after {
+    content: "”";
+    left: auto;
+    right: -21px;
+}
+.psect > a > img {
+    max-width: 100%;
+    width: 350px;
+    margin: 1em 0;
+    vertical-align: middle;
+}
+@media (max-width: 684px) {
+    .psect > a > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto !important;
+    }
+}
+/*.synthesis::before {
     content: 'Synthesis:';
     display: block;
     margin: 1em 0;
@@ -385,6 +584,10 @@ a, a:hover, a:active {
     display: block;
     margin: 1em 0;
     font-weight: bold;
+}*/
+.icon-presentation {
+    height: 35px;
+    vertical-align: middle;
 }
 
 #skills .click-me {
