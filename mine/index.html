@@ -65,7 +65,7 @@
   <!--<script src="js/scripts.js"></script>-->
   <div id="intro" class="sticky project">
     <div id="title">
-      <h1>Carl Jamilkowski</h1>
+      <h1><a href="/">Carl Jamilkowski</a></h1>
     </div>
     <div id="title-nav">
       <ul>
@@ -86,7 +86,7 @@
 
   <div class="psect">
     <h3>Brainstorming</h3>
-    <div class="brainstorm collapsed">
+    <div class="brainstorm collapsed" style="max-height:3500px;-webkit-transition-duration: 500ms;-moz-transition-duration: 500ms;-o-transition-duration: 500ms;transition-duration: 500ms;">
       <img class="title" src="img/brain1-title.png">
       <!--<img src="img/brain1-idea-procrastinate.png">
       <img src="img/brain1-idea-psychologist.png">
@@ -176,12 +176,12 @@
             Hacked<br>
             Cease and desist/legal issues</p>
         </div>
-        <div class="expander">More</div>
+        <div class="expander" style="background-image:url('img/expand-1.png')"></div>
     </div>
 
     <h3>Iterate</h3>
     <p>Bringing togethere everything we brainstormed and discussed, we created an early design iteration of what would eventually become Mine.</p>
-    <div class="synthesis collapsed">
+    <div class="synthesis collapsed" style="max-height:2200px;-webkit-transition-duration: 350ms;-moz-transition-duration: 350ms;-o-transition-duration: 350ms;transition-duration: 350ms;">
         <h3>Insurability, date-ability, employability, loanability</h3>
 
         <p>How do your Facebook profile, your FourSquare check-in history, and other social media personal data affect opaque third-party reputation scores that can affect your future?</p>
@@ -234,18 +234,18 @@
             <li>how could this expand? graph search, face recognition, etc...</li>
             <li>instances from news where people were judged like this</li>
         </ul>
-        <div class="expander">More</div>
+        <div class="expander" style="color:white;font-family: 'Permanent Marker', cursive;font-family: 'Gloria Hallelujah', cursive;font-size:26px"><div style="position:absolute;left: 50%;top: 50%;-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">{blank}-ability</div></div>
     </div>
-  </div>
-
-  <div class="psect">
-    <h3>{blank}-ability</h3>
-    <p>We had synthesized our concept and gave our first <a data-fancybox data-src="https://docs.google.com/presentation/d/1BQkguXrIscm5WfnoIdA-HMf6DpdTTmMm6n1V72WI5Xo/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
+    <!--<h3>{blank}-ability</h3>-->
+    <p>We synthesized our concept and gave our first <a data-fancybox="presentation" data-src="https://docs.google.com/presentation/d/1BQkguXrIscm5WfnoIdA-HMf6DpdTTmMm6n1V72WI5Xo/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>, which was later refactored into this <a data-fancybox="presentation" data-src="https://docs.google.com/presentation/d/1zAgeUvWDrgm_fdgFO32Y8nSmhTlITp4HjUhUvl8p7h0/embed?start=true&loop=true&delayms=5000" href="javascript:;">second presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
     <a href="img/Slide1.png" data-fancybox="images" data-caption="An early mockup of a report from our system"><img src="img/Slide1.png" style="width: 350px;border: 1px grey solid;"></a>
     <h3>Feedback</h3>
     <p class="feedback" style="margin: 15px auto;max-width: 100%;width: 500px;">"Look at reputation services that might offer the same thing"<br>
         "What does 100 percent success look like, 5 years from now?""
     </p>
+  </div>
+
+  <div class="psect">
     <h3>Brainstorming</h3>
     <div class="brainstorm" style="padding: 10px;">
         <p>What is it?<br>
@@ -255,7 +255,7 @@
         <p>Career/employer rating: "the best job you could get with this profile is at McDonalds."</p>
     </div>
     <h3>Iterate</h3>
-    <p>At this point, we started using the term 'data mirror' to describe our product. We focused on statistics, text analysis, and displaying results through easily digestible tidbits of data insight (which could be difficult to actually implement in an automated way). We brought this into the next <a data-fancybox data-src="https://docs.google.com/presentation/d/1vStThf9O9qZA9SL8RWxxMUflthlm5SoLOTpKsppSMtY/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
+    <p>At this point, we started using the term 'data mirror' to describe our product. We focused on statistics, text analysis, and displaying results through easily digestible tidbits of data insight (which could be difficult to actually implement in an automated way). We brought this into the next <a data-fancybox="presentation" data-src="https://docs.google.com/presentation/d/1vStThf9O9qZA9SL8RWxxMUflthlm5SoLOTpKsppSMtY/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
     <a href="img/-ability.png" data-fancybox="images" data-caption="A simple mockup of a text-only report"><img src="img/-ability.png" style="width: 350px;"></a>
     <h3>Feedback</h3>
     <div class="feedback" style="margin: 15px auto;max-width: 100%;width: 575px;">
@@ -276,7 +276,9 @@
         Think of illegal uses<br>
         What is the entire feedback loop?</p>
     </div>
-    <div class="question prompt" style="display: block;margin: 2em auto;">
+  </div>
+  <div class="psect">
+    <div class="question prompt" style="display: block;margin: 2em auto;-moz-transform: rotate(2deg);-o-transform: rotate(2deg);-webkit-transform: rotate(2deg);transform: rotate(2deg);">
         <h4>Tell a story about how the product is used</h4>
         <div class="sxs">
             <div><h4>Situation</h4>
@@ -298,32 +300,32 @@
     </div>
 
     <h3>Brainstorming</h3>
-    <div class="brainstorm" style="margin: 15px auto;max-width: 100%;width: 525px;">
-        <p>
-            <a target="_blank" href="http://www.nytimes.com/2013/03/31/technology/web-privacy-and-how-consumers-let-down-their-guard.html?ref=technology&_r=0">NYT Biz section - data mirror</a><br>
-            <blockquote>fine-grained controls had led people to “share more sensitive information with larger, and possibly riskier, audiences.”</blockquote>
+    <div class="brainstorm" style="margin: 15px auto;max-width: 100%;width: 540px;padding: 10px;">
+        <blockquote>fine-grained controls had led people to “share more sensitive information with larger, and possibly riskier, audiences.”</blockquote>
+        <p style="text-align:right;margin-right:2em">
+            - <a target="_blank" href="http://www.nytimes.com/2013/03/31/technology/web-privacy-and-how-consumers-let-down-their-guard.html?ref=technology&_r=0">NYT Biz section - data mirror</a>
         </p>
-        <p>
-        human vs computer analysis<br>
-        human/peer analysis: must rate <span style="text-decoration:underline">others</span> in order to be rated yourself<br>
-        Find the <span style="text-decoration:underline">enemy</span> for this product</p>
+        <div class="question">
+            <p style="text-align:left">
+            - what performs the analysis? human or computer analysis<br>
+            - are tools available to fully automate?<br>
+            - human/peer analysis: must rate <span style="text-decoration:underline">others</span> in order to be rated yourself<br>
+            - find the <span style="text-decoration:underline">enemy</span> for this product</p>
+        </div>
     </div>
 
     <h3>Iterate</h3>
     <p>We imagined some interfaces for our product that were more impactful and not overcrowded with data. One was a playful take on a children's tale. The other a simple diagram to show how closely you align with the person you want to be seen as.</p>
     <a href="img/mirror-mirror.png" data-fancybox="images" data-caption="A fanciful imagining of the data mirror"><img src="img/mirror-mirror.png" style="margin: 15px auto;max-width: 100%;width: 250px;margin-right: 40px;border: 1px grey solid;"></a>
     <a href="img/venn.png" data-fancybox="images" data-caption="A report in the format of a Venn diagram - how closely do you match how you would like to be seen?"><img src="img/venn.png" style="margin: 15px auto;max-width: 100%;width: 350px;border: 1px grey solid;"></a>
-  </div>
-  <div class="psect">
-    <h3>Iterate</h3>
-    <p>Synthesized into the next <a data-fancybox data-src="https://docs.google.com/presentation/d/1Arn59a-kbZVnVJOYEoK0D3GApj3P3pdXrzonadVPhMI/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
-    <p>A catch phrase I coined to guide to capture the power of the action taken by using our product:</p>
-    <div class="prompt" style="margin:2em auto;padding-top: 125px;">Make it mine</div>
+    <p>And I coined a catch phrase to capture the power of the action taken by using our product:</p>
+    <div class="prompt" style="margin:2em auto;padding-top: 125px;-moz-transform: rotate(-1deg);-o-transform: rotate(-1deg);-webkit-transform: rotate(-1deg);transform: rotate(-1deg);">Make it mine</div>
+
+    <p>This also led to its new name, Mine: describing the data-mining aspect as well as taking agency over how your data personal shapes your reputation. This was the <a data-fancybox="presentation" data-src="https://docs.google.com/presentation/d/1Arn59a-kbZVnVJOYEoK0D3GApj3P3pdXrzonadVPhMI/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
 
     <h3>Feedback</h3>
-    <div class="feedback">
-        <p>move use cases (insurance, hotel room in vegas, employer, etc) to beginning<br>
-        explain why they are the enemy<br>
+    <div class="feedback collapsed" style="max-height:2200px;-webkit-transition-duration: 350ms;-moz-transition-duration: 350ms;-o-transition-duration: 350ms;transition-duration: 350ms;">
+        <p>explain why they are the enemy<br>
         remove details about enemy</p>
         
         <p>speak to that appetite- what's the business model?<br>
@@ -331,43 +333,41 @@
         
         <p>personal analytics- think about that</p>
         
-        <p>assume not context for audience<br>
-        not a bad thing to clearly summarize at the beginning: "we are doing this"<br>
-        then move on to: "the problem is this"<br>
-        make it clear up front: money slide that makes it clear what it is you are doing (slide 3)<br>
-        missed the clarity of "see how others see you"<br>
-        missing: "this is the history of the user using this" (not a swim lane)</p>
+        <p>missed the clarity of "see how others see you"</p>
 
         <p>2 companies/examples that uses social data, but for different purposes - single, specific quotes<br>
         Show + act feedback loop (data mirror component is still important)<br>
-        2 real feeds - mech turk<br>
-        clout, other real world examples<br>
+        <a href="https://en.wikipedia.org/wiki/Klout" target="_blank">klout</a>, other real world examples<br>
         tracking + bad data -> find examples of this<br>
         start from scratch: use only actual examples of what people said, no theoretical</p>
 
         <p>advertisers vs other data harvesting services</p>
-
-        <p>* Doc: "<a href="http://themineproject.org/about/" target="_blank">The mine project</a>" are doing something similar<br>
-        * Sync.ly: locker, build this on top of<br>
-        * The issue is tracking<br>
-        * business model: freemium<br>
-        * Mary: The data analytics companies are sitting behind the advertisers<br>
-        * "This is about personal analytics"<br>
-        * Clay: Have a punchline "<span style="text-decoration:underline">see yourselves as others see you"</span></p>
         
         <p>** Preserve the name somewhere (data mirror)<br>
         ** Add the "<span style="font-weight:bold">make it mine</span>" button<br>
         ** Make only use of real life examples<br>
         ** Steve Bodo article about focus group.<br>
-        ** Make a focus group on mech. turk or J school.<br>
-        ** Is someone using your klout score?<br>
+        ** Make a focus group on <span style="font-weight:bold">mech. turk</span> or J school.<br>
         ** Can someone say "we have 50% of bad data, and we don't know which half"</p>
-        
-        <p>bono armani - focus group dating prospects</p>
+
+        <p>Doc:
+            <ul><li>"<a href="http://themineproject.org/about/" target="_blank">The mine project</a>" are doing something similar</li>
+            <li>The issue is tracking</li>
+            <li>business model: freemium</li></ul></p>
+        <p>Mary:
+            <ul><li>The data analytics companies are sitting behind the advertisers</li>
+            <li>"This is about personal analytics"</li></ul></p>
+        <p>Clay:
+            <ul>
+                <li>Have a punchline "<span style="text-decoration:underline">see yourselves as others see you"</span></li>
+            </ul>
+        </p>
+
+        <div class="expander" style="color:white;font-family: 'Permanent Marker', cursive;font-family: 'Gloria Hallelujah', cursive;font-size:26px"><div style="position:absolute;left: 50%;top: 50%;-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">"This is about personal analytics"</div></div>
     </div>
   </div>
   <div class="psect">
-    <div classs="prompt">
+    <div class="prompt" style="padding-left:0;padding-right:0;-moz-transform: rotate(1deg);-o-transform: rotate(1deg);-webkit-transform: rotate(1deg);transform: rotate(1deg);">
         Our project is...<br>
         We looked at...<br>
         We talked to...<br>
@@ -377,93 +377,172 @@
         Something like this is...<br>
         We build on top of...
     </div>
-    <div>interviews</div>
-    <div>mech turk</div>
-    <div><h4>Questions</h4>
-        <p>Which guy would you rather invest money with?<br>
-            Would you let this couple set you up on a date?<br>
-            Would you hire this person to plan an event?<br>
-            Would you hang out with him? Does he look like an interesting person?<br>
-            Would you let this person take care of your pets?<br>
-            Would you hire this person?<br>
-            Would you hire this guy?<br>
-            Which of these guys would you invest with?<br>
-            Would you invest with this guy?<br>
-            Which, if any, of these pictures should be removed from their Facebook profile?<br>
-            Would you hire this person, if this picture was not taken in Halloween ?<br>
-            What do you think this man’s job is?<br>
-            Would you hang out with him?<br>
-            Does he look like an interesting person?<br>
-            Would you hire him to take care of your money?<br>
-            Would you hire this person as a babysitter?</p>
+    <h3>Brainstorming</h3>
+    <div class="brainstorm collapsed" style="margin: 15px auto;max-width: 100%;width: 500px;padding: 10px;text-align:left;max-height:2600px;-webkit-transition-duration: 320ms;-moz-transition-duration: 320ms;-o-transition-duration: 320ms;transition-duration: 320ms;">
+        <div class="question">
+            <p>It's obvious we need to see how real people rate others. What kinds of questions would get quality results while also providing value to the user being analyzed?</p>
+            <p>Given some real pictures of ourselves and friends on social media, ask them:
+                <ul>
+                    <li>kinder/nicer</li>
+                    <li>set you up</li>
+                    <li>expert in field</li>
+                    <li>homework help</li>
+                    <li>sociable</li>
+                    <li>knows a lot of people</li>
+                    <li>set up on date</li>
+                    <li>competitive</li>
+                    <li>loan $100</li>
+                    <li>loan cell phone</li>
+                    <li>which seems like a kinder person?</li>
+                    <li>which would you let set you up on a date?</li>
+                    <li>which is an expert in their field?</li>
+                    <li>which has the most friends on Facebook?</li>
+                    <li>which would you let borrow your cell phone to make a call?</li>
+                </ul>
+            </p>
+            <p>Hard data – verifiable<br>
+                Clustered data – voluntarily given<br>
+                Derived
+            </p>
+            <p>Facts<br>
+                Posts<br>
+                Assumptions
+            </p>
+        </div>
 
-            <p>Would you hire this guy?<br>
-            Would you let this person take care of your pets?<br>
-            Would you invest with this guy?<br>
-            What do you think this man’s job is?<br>
-            Would you hang out with him?
-        </p>
+        <div class="expander" style="color:white;font-family: 'Permanent Marker', cursive;font-family: 'Gloria Hallelujah', cursive;font-size:26px"><div style="position:absolute;left: 50%;top: 50%;-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Questions to Ask</div></div>
     </div>
-    <p>Synthesized into the next <a data-fancybox data-src="https://docs.google.com/presentation/d/15dS48H3tMdBPEgPevh44tnQy4MFi1vWDKTQxATPY818/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
-    <div class="feedback">
-        <p>new questions:
-            <ul><li>kinder/nicer</li>
-            <li>set you up</li>
-            <li>expert in field</li>
-            <li>homework help</li>
-            <li>sociable</li>
-            <li>knows a lot of people</li>
-            <li>set up on date</li>
-            <li>competitive</li>
-            <li>loan $100</li>
-            <li>loan cell phone</li></ul>
+    <h3>Iterate</h3>
+    <div class="synthesis collapsed" style="max-height:2800px;-webkit-transition-duration: 350ms;-moz-transition-duration: 350ms;-o-transition-duration: 350ms;transition-duration: 350ms;">
+        <h3>Testing and data collection</h3>
+        <h4>In-Person Interviews</h4>
+        <p>We interviewed a diverse selection of people around NYU in-person. Some combination of the following questions (with specific pictures associated with each) were used with yes/no answers and why they answered that way.</p>
+        <ul>
+            <li>Hire to plan an event?</li>
+            <li>Hire this guy?<br>
+                <blockquote>he looks smarmy--no way!</blockquote><br>
+                <blockquote>it's clear it's <a href="http://farm9.staticflickr.com/8542/8652127214_55866dd0f6.jpg" data-fancybox data-caption="test picture">a Halloween party</a> and I love Halloween, so he'd get points for this elaborate costume</blockquote><br>
+                <blockquote>is capt. morgan his alter-ego? not good</blockquote>
+            </li>
+
+            <li>Is he interested in guys or girls?</li>
+
+            <li>Would you invest with this guy?<br>
+                <blockquote>yes, bc thinks all money managers are kind of sleezy anyway</blockquote>
+            </li>
+            <li>Invest in hybrid annuities?</li>
+            <li>Would you loan him money?</li>
+                <blockquote>The woman making a face makes me think he's not a good guy.  In the bunny pic, at least he looks optimistic</blockquote>
+            <li>Would you let him be your banker?<br>
+                <blockquote>Only because he looks too young.  The drinking doesn't bother me. But he's too young to be my banker....</blockquote>
+            </li>
+
+            <li>Take care of your pets?</li>
+            <li>Take care of your parrot?<br>
+                <blockquote>NO WAY! He's got <a href="http://farm9.staticflickr.com/8396/8652127200_a7d719fdc0_n.jpg" data-fancybox data-caption="test picture">a CAT</a>!</blockquote>
+            </li>
+            <li>Watch your dog?</li>
+            <li>Would you hire this person as a babysitter?</li>
+
+            <li>Would you have this couple set you up on a date?</li>
+
+            <li>Would you have coffee with this man?</li>
+            <li>Would you hang out with him? Does he look like an interesting person?</li>
+
+            <li>What's this guy feeling? scared or scary?</li>
+            <li>Does he look focused or scared here?</li>
+
+            <li>What reaction to him do you have with this pic?</li>
+
+            <li>Which, if any, of these pictures should be removed from their Facebook profile?</li>
+        </ul>
+        <h4>Mechanical Turk</h4>
+        <p>I programmed several batches of <a href="https://en.wikipedia.org/wiki/Amazon_Mechanical_Turk" target="_blank">Mechanical Turk</a> surveys to broaden the scope of our test group; however, this also comes at the cost of potentially lower quality answers and no ability to probe deeper for ambiguous/multi-faceted responses. 
+        <p>For the first batch, we had respondents rate pictures remove or don't remove</p>
+        <p>For another batch, based on multiple pictures of same person, we asked:
+            <ul><li>would you hire them?</li>
+            <li>what kind of job do they have?</li></ul>
         </p>
-            
-        <p>Which seems like a kinder person?<br>
-            Which would you let set you up on a date?<br>
-            Which is an expert in their field?<br>
-            Which has the most friends on Facebook?<br>
-            Which would you let borrow your cell phone to make a call?
+        <p>Another batch was done A/B style, where they choose one of two pictures based on questions, and optionally say 'why' in a freeform field
+            <ul>
+                <li>Which seems like a nicer person?<br>
+                    <blockquote>She is being friendly <a href="http://farm9.staticflickr.com/8122/8684337093_cc0c16d945_n.jpg" data-fancybox data-caption="test picture">with the rooster</a>, so she would be friendly with people.</blockquote>
+                </li>
+                <li>Which would you let set you up on a date?</li>
+                <li>Which is an expert in their field?</li>
+                <li>Which has the most friends on Facebook?</li>
+                <li>Which would you let borrow your cell phone to make a call?</li>
+            </ul>
         </p>
+        <p>We asked some questions about pictures of couples<br>
+            <ul>
+                <li>What is their relationship? Would you let them set you up on a date?<br>
+                    <blockquote>Lover because <a href="http://farm9.staticflickr.com/8122/8652127792_21d4687e07_n.jpg" data-fancybox data-caption="test picture">her looking is like</a> romance. Yes, she is hot</blockquote><br>
+                    <blockquote><a href="http://farm9.staticflickr.com/8386/8651028389_e183a97d2e_n.jpg" data-fancybox data-caption="test picture">They look like they are dating</a> because they are holding each other. No, because they probably don't have anyone to set me up with.</blockquote><br>
+                    <blockquote><a href="http://farm9.staticflickr.com/8403/8668401085_6fd2494aeb_n.jpg" data-fancybox data-caption="test picture">They look like co-workers</a> and the guy with the pen in the mouth is clowning around with her to get her attention. Yes, the blond has to have some hot looking friends</blockquote>
+                </li>
+                <li>Which person would you rather invest with? Why?</li>
+            </ul>
+        </p>
+        <p>And pictures of singles<br>
+            <ul>
+                <li>Would you hire this person?</li>
+                <li>Would you let this person take care of your pets?</li>
+                <li>Would you invest with this person?</li>
+                <li>Would you hang out with them?</li>
+                <li>Does (s)he look like an interesting person?</li>
+                <li>What do you think this person’s job is?</li>
+                <li>Should this picture be removed from their Facebook profile?</li>
+            </ul>
+        </p>
+
+        <div class="expander" style="color:white;font-family: 'Permanent Marker', cursive;font-family: 'Gloria Hallelujah', cursive;font-size:26px"><div style="position:absolute;left: 50%;top: 50%;-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Interviews!</div></div>
     </div>
-    <div class="synthesis">
+  </div>
+  <div class="psect">
+    <h3>End of Semester Results</h3>
+    <div style="margin: 15px;">
+      <p>After gathering some great data from our interviews, we iterated to the final <a data-fancybox="presentation" data-src="https://docs.google.com/presentation/d/1HEvtofcTPnUrWZGOrb0kD85--X82CNMX8sFqTXKLmA4/embed?start=true&loop=true&delayms=5000" href="javascript:;">presentation <img class="icon-presentation" src="/img/presentation.png"></a> of our design.</p>
         <p>Companies are getting more active in pursuing your social media information, and more specific in their analyses of it. Through everything you post now, someone thinks they are making an informed decision about you and the personal details of your life. Not only is the process hidden from you, the information that is being used could be wrong.</p>
         <p>Data mining is not a problem or a threat - it's a new reality. People need a buffer, allowing them to reflect upon their social media information before it hits the general public. Mine informs you about the types of conclusions data mining companies make about you, and gives you a chance to change that. In a world where no online information is truly private, and one misjudged bit of info can collapse your hopes and dreams, let Mine be your canary.</p>
-        <a href="img/Data-Mirror-Week-10.png" data-fancybox="images" data-caption="The start screen when you start up Mine"><img src="img/Data-Mirror-Week-10.png" style="display:block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
-        <p>Problem – FB timeline page</p>
-        <p>Solution</p>
+        <div style="text-align:center">
+        <a href="img/02-01-Services.png" data-fancybox="images-ui" data-caption="The start screen when you start up Mine. Plug in as many services as possible to get the best results."><img src="img/02-01-Services.png" style="display:inline-block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
+        <a href="img/Mine-6-week-12.png" data-fancybox="images-ui" data-caption="Once Mine can dig in, it shows you the results of a machine analysis. It uses linguistic analysis to give you a breakdown of the terms that describe you. Think of it like a word cloud: the bigger boxes represent more prominent categories."><img src="img/Mine-6-week-12.png" style="display:inline-block;margin: 15px auto;max-width: 100%;height: 151px;"></a>
+        <a href="img/02-03-data-mirror.png" data-fancybox="images-ui" data-caption="Mine groups your social media by descriptive categories. You can adjust the timespan that is being analyzed."><img src="img/02-03-data-mirror.png" style="display:inline-block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
+        <a href="img/02-04-ENtry.png" data-fancybox="images-ui" data-caption="Tell mine how you would like to be seen by highlighting and hiding characteristics"><img src="img/02-04-ENtry.png" style="display:inline-block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
+        <a href="img/02-05-A-B.png" data-fancybox="images-ui" data-caption="In order to get a human analysis of your data, you must participate in the crowdsourcing yourself."><img src="img/02-05-A-B.png" style="display:inline-block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
+        <a href="img/02-06-Full-Shaper.png" data-fancybox="images-ui" data-caption="Once you've rated others, you get a report of how you are perceived by your data and can take action to shape that perception.'"><img src="img/02-06-Full-Shaper.png" style="display:inline-block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
+        </div>
+        <p>User instructions
+        </p>
         <ol>
             <li>Plug in the services
-                <ol>
+                <ul>
                     <li>When you first open Mine, you plug in your social networks. The more you enable, the better the results.</li>
                     <li>Once that's done, you press "Make it Mine" to get your social media presence analyzed</li>
-                </ol>
+                </ul>
             </li>
             <li>Get machine analysis
-                <ol>
+                <ul>
                     <li>One component of a Mine analysis is a machine</li>
-                </ol>
+                </ul>
             </li>
             <li>Rate others</li>
             <li>Get Human analysis</li>
         </ol>
-        <p>Hard data – verifiable<br>
-            Clustered data – voluntarily given<br>
-            Derived
-        </p>
-        <p>Facts<br>
-            Posts<br>
-            Assumptions
-        </p>
     </div>
-    <div class="psect">
-        <h3>Final Results</h3>
-        <p><a data-fancybox href="https://vimeo.com/70737111">Mine UI Walkthrough <img class="icon-presentation" src="/img/walkthrough.png"></a></p>
-        <p><a data-fancybox href="https://vimeo.com/70741050#t=5m50s">Mine project presentation video  <img class="icon-presentation" src="/img/video.png"></a> (<a data-fancybox data-src="https://onedrive.live.com/embed?cid=1E5892080CC7AA6B&resid=1E5892080CC7AA6B%216121&authkey=ACj0_zj1j3XExhs&em=2" href="javascript:;">slides <img class="icon-presentation" src="/img/presentation.png"></a>) at the <a target="_blank" href="http://research.microsoft.com/en-us/events/fs2013/">2013 Microsoft Research Faculty Summit</a> as part of the Design Expo – Making Data Useful: Improving Your Life, Community, and World.</p>
-        <a href="img/photo-op-cutout.jpg" data-fancybox="images" data-caption="A cardboard cutout used in our presentation to look like that 'party animal' holding a red SOLO cup'"><img src="img/photo-op-cutout.jpg" style="display:block;margin: 15px auto;max-width: 100%;width: 250px;"></a>
+  </div>
+  <div class="psect">
+      <h3>Final Presentation at Microsoft</h3>
+      <div style="margin: 15px;">
+        <p>We presented the project at the <a target="_blank" href="http://research.microsoft.com/en-us/events/fs2013/">2013 Microsoft Research Faculty Summit</a> as part of the Design Expo – Making Data Useful: Improving Your Life, Community, and World. Here is a <a data-fancybox="final-msr" href="https://vimeo.com/70741050#t=5m50s">video of the Mine project presentation <img class="icon-presentation" src="/img/video.png"></a> and these are the <a data-fancybox="presentation" data-src="https://onedrive.live.com/embed?cid=1E5892080CC7AA6B&resid=1E5892080CC7AA6B%216121&authkey=ACj0_zj1j3XExhs&em=2" href="javascript:;">slides <img class="icon-presentation" src="/img/presentation.png"></a>.</p>
+        <p>Here is a <a data-fancybox="final-msr" href="https://vimeo.com/70737111">Walkthrough of the Mine UI <img class="icon-presentation" src="/img/walkthrough.png"></a> - I completely redesigned the UI in the <a href="https://en.wikipedia.org/wiki/Metro_(design_language)" target="_blank">Metro</a> design style.</p>
+        <a href="img/msr-pres.jpg" data-fancybox="final-msr" data-caption="My team presenting at the Microsoft campus in Redmond, WAA"><img src="img/msr-pres.jpg" style="margin: 15px 15px 15px 0;max-width: 100%;height: 250px;"></a>
+        <a href="img/photo-op-cutout.jpg" data-fancybox="final-msr" data-caption="A cardboard cutout used in our presentation to look like that 'party animal' holding a red SOLO cup'"><img src="img/photo-op-cutout.jpg" style="margin: 15px 15px 15px 0;max-width: 100%;height: 250px;"></a>
+        <a href="img/best-system-design.jpg" data-fancybox="final-msr" data-caption="Mine won the 'Best System Design' award from Microsoft Research"><img src="img/best-system-design.jpg" style="margin: 15px 15px 15px 0;max-width: 100%;height: 250px;"></a>
         <p>Mine won the 'Best System Design' award from Microsoft Research.</p>
         <p><a target="_blank" href="http://mine.social/">Project site</a></p>
-    </div>
+      </div>
   </div>
   <script>
       $('.psect .expander').click(function() {
