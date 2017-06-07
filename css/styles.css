@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
 }
 
-a, body.isDesktop a:hover, body.isDesktop a:active {
+a, body.isDesktop a:hover, a:active {
     text-decoration: none;
     color: #3f51b5;
 }
@@ -255,6 +255,7 @@ body.isDesktop #projects .project:hover > a > div {
 
 .kudos button.slick-arrow {
     height: 50px;
+    width: 25px;
     color: black;
 }
 button.slick-prev.slick-arrow:before,
@@ -688,6 +689,13 @@ body.isDesktop .psect .feedback .expander:hover {
     vertical-align: middle;
 }
 
+.psect.end {
+    margin: 100px 0;
+}
+.psect.end p {
+    text-align: center;
+}
+
 #skills .click-me {
     width: 125px;
     margin-left: 23px;
@@ -802,9 +810,14 @@ body.isDesktop #skills .primary .skill:hover {
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
     #intro.section {
         background-position-x: 25%;
+    }
+}
+@media (max-width: 780px) {
+    #intro.section {
+        background-position-x: 38%;
     }
 }
 @media (max-width: 630px) {
