@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
 }
 
-a, a:hover, a:active {
+a, body.isDesktop a:hover, body.isDesktop a:active {
     text-decoration: none;
     color: #3f51b5;
 }
@@ -188,7 +188,7 @@ a, a:hover, a:active {
     display: inline-block;
     line-height: 44px;
 }
-#projects .more a:hover {
+body.isDesktop #projects .more a:hover {
     background-color: #9e9e9e;
 }
 #projects {
@@ -238,7 +238,7 @@ a, a:hover, a:active {
 #projects .project > a {
     color: black;
 }
-#projects .project:hover > a > div {
+body.isDesktop #projects .project:hover > a > div {
     opacity: 0;
 }
 #projects .project div h3 {
@@ -523,21 +523,21 @@ button.slick-next.slick-arrow:before {
 .psect .brainstorm .expander {
     background-color: #5fcc63;
 }
-.psect .brainstorm .expander:hover {
+body.isDesktop .psect .brainstorm .expander:hover {
     background-color: #4CAF50;
     animation: none;
 }
 .psect .synthesis .expander {
     background-color: #4488da;/*#4F83C1;*/
 }
-.psect .synthesis .expander:hover {
+body.isDesktop .psect .synthesis .expander:hover {
     background-color: #205fab;/*#8574D0;*/
     animation: none;
 }
 .psect .feedback .expander {
     background-color: #8574D0;
 }
-.psect .feedback .expander:hover {
+body.isDesktop .psect .feedback .expander:hover {
     background-color: #53429e;
     animation: none;
 }
@@ -751,7 +751,7 @@ button.slick-next.slick-arrow:before {
     position: relative;
     overflow: hidden;
 }
-#skills .primary .skill:hover {
+body.isDesktop #skills .primary .skill:hover {
     background-color: #a0a0a0;
 }
 #skills .primary .skill:last-child,
@@ -770,7 +770,7 @@ button.slick-next.slick-arrow:before {
     color: white;
     cursor: default;
 }
-/*#skills .primary .skill.selected:hover {
+/* body.isDesktop #skills .primary .skill.selected:hover {
     background-color: #4e64de;
 }*/
 #skills .secondary .sub-skill {
@@ -887,7 +887,8 @@ button.slick-next.slick-arrow:before {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.graphic:hover {
+body.isDesktop .graphic:hover,
+body.isMobile .graphic {
     border: 1px solid lightgrey;
     margin: 0 15px;
 }
@@ -904,9 +905,13 @@ button.slick-next.slick-arrow:before {
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.8);
 }
-.graphic:hover .desc {
+body.isDesktop .graphic:hover .desc,
+body.isMobile .graphic .desc {
     opacity: 1;
     z-index: 999;
+}
+body.isMobile .graphic .desc {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .graphic .desc p {
     position: absolute;
@@ -987,8 +992,8 @@ span.uline {
 a.icon-link[data-fancybox] {
     white-space: nowrap;
 }
-a.icon-link[data-fancybox]:hover,
-a.kudo-icon-link[data-fancybox]:hover {
+body.isDesktop a.icon-link[data-fancybox]:hover,
+body.isDesktop a.kudo-icon-link[data-fancybox]:hover {
     position: relative;
 }
 /*a[data-fancybox="final-ui"],
@@ -998,25 +1003,25 @@ a[data-fancybox="images"],
 a[data-fancybox="first"] {
     white-space: normal;
 }
-.graphic a[data-fancybox]:hover,
-a[data-fancybox="final-ui"]:hover,
-a.mine-final-pics[data-fancybox="final-msr"]:hover,
-a[data-fancybox="images-ui"]:hover,
-a[data-fancybox="images"]:hover,
-a[data-fancybox="first"]:hover {
+body.isDesktop .graphic a[data-fancybox]:hover,
+body.isDesktop a[data-fancybox="final-ui"]:hover,
+body.isDesktop a.mine-final-pics[data-fancybox="final-msr"]:hover,
+body.isDesktop a[data-fancybox="images-ui"]:hover,
+body.isDesktop a[data-fancybox="images"]:hover,
+body.isDesktop a[data-fancybox="first"]:hover {
     position: static;
 }
-.graphic a[data-fancybox]:hover::after,
-a.graphic[data-fancybox]:hover::after,
-a[data-fancybox="final-ui"]:hover::after,
-a.mine-final-pics[data-fancybox="final-msr"]:hover::after,
-a[data-fancybox="images-ui"]:hover::after,
-a[data-fancybox="images"]:hover::after,
-a[data-fancybox="first"]:hover::after {
+body.isDesktop .graphic a[data-fancybox]:hover::after,
+body.isDesktop a.graphic[data-fancybox]:hover::after,
+body.isDesktop a[data-fancybox="final-ui"]:hover::after,
+body.isDesktop a.mine-final-pics[data-fancybox="final-msr"]:hover::after,
+body.isDesktop a[data-fancybox="images-ui"]:hover::after,
+body.isDesktop a[data-fancybox="images"]:hover::after,
+body.isDesktop a[data-fancybox="first"]:hover::after {
     display: none;
 }*/
-a.icon-link[data-fancybox]:hover::after,
-a.kudo-icon-link[data-fancybox]:hover::after {
+body.isDesktop a.icon-link[data-fancybox]:hover::after,
+body.isDesktop a.kudo-icon-link[data-fancybox]:hover::after {
     content: '';
     background-image: url('/img/fs.png');
     background-repeat: no-repeat;
@@ -1039,11 +1044,11 @@ a.kudo-icon-link[data-fancybox]:hover::after {
 /*a:not(.icon-link)[data-fancybox] {
     white-space: nowrap;
 }*/
-div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover {
+body.isDesktop div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover {
     position: relative;
     display: inline-block;
 }
-a:not(.icon-link)[data-fancybox]:hover::after {
+body.isDesktop a:not(.icon-link)[data-fancybox]:hover::after {
     content: '';
     background-image: url('/img/fs.png');
     background-repeat: no-repeat;
@@ -1064,11 +1069,11 @@ a:not(.icon-link)[data-fancybox]:hover::after {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);*/
 }
-div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover::after {
+body.isDesktop div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover::after {
     right: 10px;
     bottom: 28px;
 }
-*:not(.graphic) > a.kudo-icon-link:not(.icon-link)[data-fancybox]:hover::after {
+body.isDesktop *:not(.graphic) > a.kudo-icon-link:not(.icon-link)[data-fancybox]:hover::after {
     right: -27px;
     left: auto;
     bottom: auto;
@@ -1078,20 +1083,19 @@ a.logo > img {
     float: left;
     margin: 0 12px 0 0;
 }
-div:not(.graphic) > a.logo:not(.icon-link):hover {
+body.isDesktop div:not(.graphic) > a.logo:not(.icon-link):hover {
     margin: 0 12px 0 0;
     float: left;
     display: block;
 }
-div:not(.graphic) > a.logo:not(.icon-link):hover > img {
+body.isDesktop div:not(.graphic) > a.logo:not(.icon-link):hover > img {
     margin: 0 0 0 0;
 }
-div:not(.graphic) > a.logo:not(.icon-link)
-div:not(.graphic) > a.logo:not(.icon-link)[data-fancybox]:hover {
+body.isDesktop div:not(.graphic) > a.logo:not(.icon-link)[data-fancybox]:hover {
     display: block;
     float: left;
 }
-div:not(.graphic) > a.logo:not(.icon-link)[data-fancybox]:hover::after {
+body.isDesktop div:not(.graphic) > a.logo:not(.icon-link)[data-fancybox]:hover::after {
     right: 7px;
     bottom: 7px;
 }
@@ -1116,7 +1120,7 @@ a[target='_blank']::after {
     transform: translateY(-50%);
     opacity: 0.6;
 }
-a[target='_blank']:hover::after {
+body.isDesktop a[target='_blank']:hover::after {
     opacity: 1;
 }
 #title-nav a[target='_blank'] {
@@ -1145,4 +1149,10 @@ a[target='_blank']:hover::after {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     padding: 4px;
+}
+
+.wc-flow button.slick-prev.slick-arrow,
+.wc-flow button.slick-next.slick-arrow {
+    height: 50px;
+    width: 25px;
 }
