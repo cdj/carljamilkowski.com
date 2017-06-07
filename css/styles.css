@@ -170,7 +170,15 @@ a, a:hover, a:active {
 }
 
 #projects .more {
-    margin-top: 60px;
+    margin-top: 0;
+    display: inline-block;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
 }
 #projects .more a {
     border-radius: 50%;
@@ -227,10 +235,10 @@ a, a:hover, a:active {
     -o-transition: opacity 250ms ease-out;
     transition: opacity 250ms ease-out;
 }
-#projects .project a {
+#projects .project > a {
     color: black;
 }
-#projects .project:hover div {
+#projects .project:hover > a > div {
     opacity: 0;
 }
 #projects .project div h3 {
@@ -249,18 +257,31 @@ a, a:hover, a:active {
     height: 50px;
     color: black;
 }
-.kudos button.slick-prev.slick-arrow:before,
-.kudos button.slick-next.slick-arrow:before {
+button.slick-prev.slick-arrow:before,
+button.slick-next.slick-arrow:before {
     color: black;
     font-size: 50px;
     cursor: pointer;
 }
-.kudos button.slick-prev.slick-arrow:before {
+button.slick-prev.slick-arrow:before {
     content: '\276C';
 } 
-.kudos button.slick-next.slick-arrow:before {
+button.slick-next.slick-arrow:before {
     content: '\276D';
-} 
+}
+.wc-flow {
+    width: 415px;
+    display: inline-block;
+    max-width: 100%;
+    max-width: calc(100% - 50px);
+}
+.wc-flow .slick-slide {
+    position: relative;
+}
+.wc-flow h5 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
 
 #blurb.section {
     /*position: relative;*/
@@ -646,6 +667,10 @@ a, a:hover, a:active {
         margin-right: auto !important;
     }
 }
+.psect > a.graphic > img {
+    width: 225px;
+    margin: 0;
+}
 /*.synthesis::before {
     content: 'Synthesis:';
     display: block;
@@ -726,6 +751,9 @@ a, a:hover, a:active {
     position: relative;
     overflow: hidden;
 }
+#skills .primary .skill:hover {
+    background-color: #a0a0a0;
+}
 #skills .primary .skill:last-child,
 #skills .secondary .sub-skill:last-child {
     margin-right: 0;
@@ -742,6 +770,9 @@ a, a:hover, a:active {
     color: white;
     cursor: default;
 }
+/*#skills .primary .skill.selected:hover {
+    background-color: #4e64de;
+}*/
 #skills .secondary .sub-skill {
     vertical-align: top;
 }
@@ -831,3 +862,287 @@ a, a:hover, a:active {
     display: block !important;
 }
 
+.iPhone {
+    height: 548px;
+    width: 320px;
+    padding-top: 138px;
+    padding-bottom: 115px;
+    padding-left: 32px;
+    padding-right: 30px;
+    background-image: url('/Archive/jastr/iPhone5.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    clear: none;
+    box-sizing: content-box;
+}
+
+.graphic {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+    /*border: 1px solid transparent;*/
+    margin: 1px 16px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.graphic:hover {
+    border: 1px solid lightgrey;
+    margin: 0 15px;
+}
+.graphic img {
+    width: 225px;
+    vertical-align: bottom;
+}
+.graphic .desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.graphic:hover .desc {
+    opacity: 1;
+    z-index: 999;
+}
+.graphic .desc p {
+    position: absolute;
+    bottom: 0;
+    padding: 0 8px;
+}
+
+.vimeo {
+    max-width: 100%;
+}
+.youtube {
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 15px 0;
+}
+.youtube.full {
+    max-width: 400px;
+}
+.youtube.half {
+    margin: 15px 10px;
+}
+@media (max-width: 1090px) {
+    .youtube.half {
+        width: 47%;
+        margin: 15px 1%;
+    }
+}
+@media (max-width: 840px) {
+    .youtube.half {
+        width: 500px;
+        margin: 15px 0;
+        max-width: 100%;
+    }
+    .youtube.half.full {
+        width: 400px;
+    }
+}
+.youtube::before,
+.youtube.wide::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+}
+.youtube.full::before {
+    padding-top: 75%;
+}
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#iPhone-prototype-selections {
+    display: inline-block;
+    vertical-align: top;
+    margin: 150px 10px 20px 0;
+}
+@media (max-width: 646px) {
+    #iPhone-prototype-selections {
+        margin-top: 20px;
+    }
+}
+
+span.bold {
+    font-weight: bold;
+}
+span.uline {
+    text-decoration: underline;
+}
+
+a.icon-link[data-fancybox] {
+    white-space: nowrap;
+}
+a.icon-link[data-fancybox]:hover,
+a.kudo-icon-link[data-fancybox]:hover {
+    position: relative;
+}
+/*a[data-fancybox="final-ui"],
+a.mine-final-pics[data-fancybox="final-msr"],
+a[data-fancybox="images-ui"],
+a[data-fancybox="images"],
+a[data-fancybox="first"] {
+    white-space: normal;
+}
+.graphic a[data-fancybox]:hover,
+a[data-fancybox="final-ui"]:hover,
+a.mine-final-pics[data-fancybox="final-msr"]:hover,
+a[data-fancybox="images-ui"]:hover,
+a[data-fancybox="images"]:hover,
+a[data-fancybox="first"]:hover {
+    position: static;
+}
+.graphic a[data-fancybox]:hover::after,
+a.graphic[data-fancybox]:hover::after,
+a[data-fancybox="final-ui"]:hover::after,
+a.mine-final-pics[data-fancybox="final-msr"]:hover::after,
+a[data-fancybox="images-ui"]:hover::after,
+a[data-fancybox="images"]:hover::after,
+a[data-fancybox="first"]:hover::after {
+    display: none;
+}*/
+a.icon-link[data-fancybox]:hover::after,
+a.kudo-icon-link[data-fancybox]:hover::after {
+    content: '';
+    background-image: url('/img/fs.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    z-index: 999;
+    position: absolute;
+    /*left: -28px;*/
+    right: 7px;
+    background-color: white;
+    -moz-box-shadow: 0px 0px 5px 5px white;
+    -webkit-box-shadow: 0px 0px 5px 5px white;
+    box-shadow: 0px 0px 5px 5px white;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*a:not(.icon-link)[data-fancybox] {
+    white-space: nowrap;
+}*/
+div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover {
+    position: relative;
+    display: inline-block;
+}
+a:not(.icon-link)[data-fancybox]:hover::after {
+    content: '';
+    background-image: url('/img/fs.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    z-index: 999;
+    position: absolute;
+    /*left: -28px;*/
+    right: 7px;
+    bottom: 7px;
+    background-color: white;
+    -moz-box-shadow: 0px 0px 5px 5px white;
+    -webkit-box-shadow: 0px 0px 5px 5px white;
+    box-shadow: 0px 0px 5px 5px white;
+    /*top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+}
+div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover::after {
+    right: 10px;
+    bottom: 28px;
+}
+*:not(.graphic) > a.kudo-icon-link:not(.icon-link)[data-fancybox]:hover::after {
+    right: -27px;
+    left: auto;
+    bottom: auto;
+}
+img.logo,
+a.logo > img {
+    float: left;
+    margin: 0 12px 0 0;
+}
+div:not(.graphic) > a.logo:not(.icon-link):hover {
+    margin: 0 12px 0 0;
+    float: left;
+    display: block;
+}
+div:not(.graphic) > a.logo:not(.icon-link):hover > img {
+    margin: 0 0 0 0;
+}
+div:not(.graphic) > a.logo:not(.icon-link)
+div:not(.graphic) > a.logo:not(.icon-link)[data-fancybox]:hover {
+    display: block;
+    float: left;
+}
+div:not(.graphic) > a.logo:not(.icon-link)[data-fancybox]:hover::after {
+    right: 7px;
+    bottom: 7px;
+}
+
+a[target='_blank'] {
+    padding-right: 21px;
+    position: relative;
+    white-space: nowrap;
+}
+a[target='_blank']::after {
+    content: '';
+    background-image: url('/img/new_win.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+a[target='_blank']:hover::after {
+    opacity: 1;
+}
+#title-nav a[target='_blank'] {
+    padding-right: 0;
+    white-space: normal;
+}
+#title-nav a[target='_blank']::after {
+    display: none !important;
+}
+
+#iPhone-prototype-selections a {
+    padding-right: 26px;
+    position: relative;
+}
+#iPhone-prototype-selections a::after {
+    content: '';
+    background-image: url('/img/play.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 4px;
+}

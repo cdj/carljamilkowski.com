@@ -13,9 +13,9 @@ $(document).ready(function(){
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear'//,
-        // autoplay: true,
-        // autoplaySpeed: 4000
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 4000
     });
 
     $("a.local").click(function(e) {
