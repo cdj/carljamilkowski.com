@@ -1004,6 +1004,7 @@ span.uline {
 
 a.icon-link[data-fancybox] {
     white-space: nowrap;
+    margin-right: 3px;
 }
 body.isDesktop a.icon-link[data-fancybox]:hover,
 body.isDesktop a.kudo-icon-link[data-fancybox]:hover {
@@ -1132,6 +1133,13 @@ a[target='_blank']::after {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     opacity: 0.6;
+}
+.team a[target='_blank'] {
+    padding-right: 0;
+    position: static;
+}
+.team a[target='_blank']::after {
+    display: none !important;
 }
 body.isDesktop a[target='_blank']:hover::after {
     opacity: 1;
