@@ -45,6 +45,7 @@ $(document).ready(function(){
             $("#skills .primary .skill.selected").not(this).removeClass("selected");
             $(this).addClass("selected");
             raiseSecondarySkillBars($(this).attr('data-skill'));
+            ga('send', 'event', 'Skills', 'click', $(this).attr('data-skill'));
         });
     });
 });
@@ -93,6 +94,8 @@ function raisePrimarySkillBars() {
     setTimeout(function() {
         $("#skills .click-me").addClass('visible');
     }, ($priSkills.length * 100));
+
+    ga('send', 'event', 'Skills', 'appear', 'primary');
 }
 
 function animateSecondarySkillBars(priSkill) {
