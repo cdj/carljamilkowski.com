@@ -46,18 +46,8 @@
   <!--<script src="/js/jquery.fancybox.min.js"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
   <!--<script src="/js/script.js"></script>-->
+
   <script src="/js/all.js"></script>
-
-  <!--google analytics-->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-40601502-2', 'auto');
-    ga('send', 'pageview');
-  </script>
 
 </head>
 
@@ -69,7 +59,7 @@
     </div>
     <div id="title-nav">
       <ul>
-          <li><a href="/carlj-resume-online-2017-06-03.pdf" target="_blank">Resume</a></li>
+          <li><a href="/carlj-resume-online-2017-06-10.pdf" target="_blank">Resume</a></li>
           <li><a class="local" href="/#projects">Projects</a></li>
           <li><a class="local" href="/#about">About</a></li>
           <li><a class="local" href="/#mentions">Mentions</a></li>
@@ -81,12 +71,12 @@
     <h2>Watercooler TV</h2>
     <img class="logo" src="img/wc-logo.png" style="height: 80px;">
     <p>This is a TV chat application that lets you chat about what’s happening on screen, without having to watch at the same time. We designed it to make use of the second screen experience and also attempt to avoid spoilers. Want to bring back those water cooler chats of the past, where you discussed TV from the night before? This might help.</p>
-    <h3>The Team</h3>
+    <h3 style="clear: left;margin-top: 36px;">The Team</h3>
     <p class="team">
-      <span class="bold">All</span>: research, ideation, prototype testing, user interviews, persona development<br>
       <span class="bold">Me</span>: wireframes, mockups, software prototype development, actor, information architecture<br>
       <span class="bold"><a href="http://andrest.me/" target="_blank">Andrés Taraciuk</a></span>: software prototype development, actor<br>
-      <span class="bold">Dekunle Somade:</span>: writing, directing
+      <span class="bold">Dekunle Somade:</span>: writing, directing<br>
+      <span class="bold">All</span>: research, ideation, prototype testing, user interviews, persona development
     </p>
     <p>This is the <a href="http://watrcoolr.tv/" target="_blank">original project site</a>.</p>
     <p>Final prototype on <a href="https://github.com/cdj/WatrCoolr" target="_blank">GitHub</a>.</p>
@@ -172,7 +162,10 @@
       <p>Thanks for checking out this project! See <a href="/#projects">other featured projects</a> and learn <a href="/#about">more about me</a></p>
   </div>
   <script>
-      $('.wc-flow').slick();
+      $('.wc-flow').slick()
+        .on('afterChange', function(event, slick, currentSlide){
+          ga('send', 'event', 'UserFlow', 'change slide', currentSlide);
+        });
   </script>
 </body>
 </html>

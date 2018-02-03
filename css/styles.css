@@ -77,7 +77,9 @@ a, body.isDesktop a:hover, a:active {
 #intro.section h3 {
     padding-top: 37px;
     margin-top: 20px;
-    margin-left: 69px;
+    margin-left: 43px;
+    font-weight: normal;
+    font-size: 21px;
 }
 #title-nav {
     position: fixed;
