@@ -25,21 +25,23 @@
 <!-- InstanceBeginEditable name="Main" -->
 <div id="navBar">
   <div id="search">
-    <form name="search" method="GET" action="http://www.google.com/u/illinoisedu" onsubmit="if(document.search.q.value==&#39;&#39;){alert(&#39;Please enter a search parameter.&#39;);return false;}document.search.q.value+=&#39; site:asme.ec.uiuc.edu&#39;;return true;">
-        <label>search</label>
-        <input type="text" name="q" id="searchbox" size="14" maxlength="255" onclick="document.search.q.value=&#39;&#39;;">
-        <input type="submit" value="go" class="searchbutton" name="submit">
-		<input type="hidden" name="type" value="search">
-		<input type="hidden" name="url" value="http://www.google.com/u/illinoisedu">
-	</form>
+    <!-- <form name="search" method="GET" action="http://www.google.com/u/illinoisedu" onsubmit="if(document.search.q.value==''){alert('Please enter a search parameter.');return false;}document.search.q.value+=' site:asme.ec.uiuc.edu';return true;"> -->
+    <form name="search" method="GET" action="" onsubmit="return false;">
+      <label>search</label>
+      <!-- <input type="text" name="q" id="searchbox" size="14" maxlength="255" onclick="document.search.q.value='';"> -->
+      <input type="text" name="q" id="searchbox" size="14" maxlength="255">
+      <input type="submit" value="go" class="searchbutton" name="submit">
+      <input type="hidden" name="type" value="search">
+      <input type="hidden" name="url" value="http://www.google.com/u/illinoisedu">
+    </form>
   </div>
   <div id="sectionLinks">
     <h6>Team Files </h6>
     <ul>
-      <li><a href="./ASME_Ford_files/2006ContestSummaryandEdgeDetails.ppt">Contest Summary and Edge Details</a></li>
-	  <li><a href="./ASME_Ford_files/2006FordASMEContestOverview.doc">Contest Overview</a></li>
-	  <li><a href="./ASME_Ford_files/2006FordASMEFlier.ppt">Flier</a></li>
-	  <li><a href="./ASME_Ford_files/2006FordASMEDesignRegistrationForm.doc">Registration Form</a></li>
+      <li><a href="./ASME_Ford_files/2006ContestSummaryandEdgeDetails.pdf">Contest Summary and Edge Details</a></li>
+	  <li><a href="./ASME_Ford_files/2006FordASMEContestOverview.pdf">Contest Overview</a></li>
+	  <li><a href="./ASME_Ford_files/2006FordASMEFlier.pdf">Flier</a></li>
+	  <li><a href="./ASME_Ford_files/2006FordASMEDesignRegistrationForm.pdf">Registration Form</a></li>
     </ul>
   </div>
   <div class="relatedLinks">
