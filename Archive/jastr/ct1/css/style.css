@@ -234,7 +234,7 @@ li {
     background-position: center;
 }
 .titlePlusCircle {
-	background-image: url('../img/plus.png');
+	background-image: url('../../img/plus.png');
 	/*float:left;*/
 	display: inline-block;
 	clear:left;
