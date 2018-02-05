@@ -6,10 +6,10 @@
 
 
     <!-- compiled css output -->
-    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="../css/ionic.app.min.css" rel="stylesheet">
 
     <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="../lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -30,7 +30,7 @@
     <script src="js/app.js"></script>
 
     <!-- your app's css -->
-    <link href="css/raleway.css" rel="stylesheet">
+    <link href="../css/raleway.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body ng-controller="AppController" style="color:white;background-color:#454e58;">
@@ -46,41 +46,41 @@
         <ion-content>
           <div class="row row-center">
             <div class="col col-33 col-offset-33" style="padding: 0;">
-              <img src="img/userImage-small.png" class="userImage">
+              <img src="../img/userImage-small.png" class="userImage">
             </div>
           </div>
           <h4>John Doe</h4>
           <div class="row row-center gridRow">
             <div class="col col-33 serviceTile gridBottom gridRight">
-              <img src="img/Heart-Rate.png">
+              <img src="../img/Heart-Rate.png">
             </div>
             <div class="col col-33 serviceTile gridBottom gridLeft gridRight">
-              <a href="#/syncing"><img src="img/helmet.png"></a>
+              <a href="#/syncing"><img src="../img/helmet.png"></a>
             </div>
             <div class="col col-33 serviceTile gridBottom gridLeft">
-              <img src="img/Thermal.png">
+              <img src="../img/Thermal.png">
             </div>
           </div>
           <div class="row row-center gridRow">
             <div class="col col-33 serviceTile gridTop gridBottom gridRight">
-              <img src="img/DNA.png">
+              <img src="../img/DNA.png">
             </div>
             <div class="col col-33 serviceTile gridTop gridBottom gridLeft gridRight">
-              <img src="img/Pills.png">
+              <img src="../img/Pills.png">
             </div>
             <div class="col col-33 serviceTile gridTop gridBottom gridLeft">
-              <img src="img/Water-Drop.png">
+              <img src="../img/Water-Drop.png">
             </div>
           </div>
           <div class="row row-center gridRow">
             <div class="col col-33 serviceTile gridTop gridRight">
-              <img src="img/O2.png">
+              <img src="../img/O2.png">
             </div>
             <div class="col col-33 serviceTile gridTop gridLeft gridRight">
-              <img src="img/Clock.png">
+              <img src="../img/Clock.png">
             </div>
             <div class="col col-33 serviceTile gridTop gridLeft">
-              <img src="img/Notes.png">
+              <img src="../img/Notes.png">
             </div>
           </div>
           <div class="row row-center gridRow">
@@ -113,7 +113,7 @@
         </ion-header-bar>
         <ion-content>
           <a href="#/activityLevels">
-            <img src="img/syncing.png" style="width:90vw; margin:auto 5%; position:relative; top:50%; transform:translateY(-50%);">
+            <img src="../img/syncing.png" style="width:90vw; margin:auto 5%; position:relative; top:50%; transform:translateY(-50%);">
           </a>
         </ion-content>
       </ion-view>
@@ -122,7 +122,7 @@
     <script id="templates/activityLevels.html" type="text/ng-template">
       <ion-view drag-back>
         <ion-content>
-          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('img/activityLevels.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
+          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('../img/activityLevels.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
             <a href="#/notes" style="top:25vh; bottom:5vh; left:8vh; width:25vh; display:block; position:absolute;"></a>
             <a href="#/syncing" style="height: 4vh; bottom:0; left:0; width:4vh; display:block; position:absolute;"></a>
           </div>
@@ -139,7 +139,7 @@
         <ion-content>
           <div class="row row-center">
             <div class="col col-33 col-offset-33" style="padding: 0;">
-              <img src="img/userImage-small.png" class="userImage">
+              <img src="../img/userImage-small.png" class="userImage">
             </div>
           </div>
           <h4>John Doe</h4>
@@ -159,7 +159,7 @@
         <ion-content>
           <div class="row row-center">
             <div class="col col-33 col-offset-33" style="padding: 0;">
-              <img src="img/userImage-small.png" class="userImage">
+              <img src="../img/userImage-small.png" class="userImage">
             </div>
           </div>
           <h4>John Doe</h4>
@@ -169,7 +169,7 @@
             <div class="col"></div>
             <div class="col col-66">
               <p class="logAdd" onclick="window.location.href='#/sleepPatterns';">
-                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(../img/plus.png);"></a>
                 <a href="#/sleepPatterns">Low</a>
                 <a href="#/sleepPatterns" class="ion-more"></a></p>
             </div>
@@ -179,7 +179,7 @@
             <div class="col"></div>
             <div class="col col-66">
               <p class="logAdd" onclick="window.location.href='#/sleepPatterns';">
-                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(../img/plus.png);"></a>
                 <a href="#/sleepPatterns">Med</a>
                 <a href="#/sleepPatterns" class="ion-more"></a></p>
             </div>
@@ -189,7 +189,7 @@
             <div class="col"></div>
             <div class="col col-66">
               <p class="logAdd" onclick="window.location.href='#/sleepPatterns';">
-                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(img/plus.png);"></a>
+                <a href="#/sleepPatterns" class="whiteCircleButton logAdd" style="background-image: url(../img/plus.png);"></a>
                 <a href="#/sleepPatterns">High</a>
                 <a href="#/sleepPatterns" class="ion-more"></a></p>
             </div>
@@ -206,7 +206,7 @@
     <script id="templates/sleepPatterns.html" type="text/ng-template">
       <ion-view drag-back>
         <ion-content>
-          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('img/sleepPatterns.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
+          <div style="top: 5vh; bottom: 5vh; left: 5vh; right: 0; position: absolute; background-image: url('../img/sleepPatterns.png'); background-repeat: no-repeat; background-position: left center; background-size: auto 100%;">
             <a href="#/sleepVPainLevels" style="top:27vh; bottom:11vh; left:7vh; width:35vh; display:block; position:absolute;"></a>
             <a href="#/logPainLevels" style="height: 4vh; bottom:0; left:0; width:3.5vh; display:block; position:absolute;"></a>
           </div>
@@ -223,14 +223,14 @@
         <ion-content>
           <div class="row row-center">
             <div class="col col-33 col-offset-33" style="padding: 0;">
-              <img src="img/userImage-small.png" class="userImage">
+              <img src="../img/userImage-small.png" class="userImage">
             </div>
           </div>
           <h4>John Doe</h4>
           <p style="font-size: 135%;">Sleep v. Pain Levels</p>
           <div class="row">
             <div class="col col-80 col-offset-10">
-              <a href="#/progressTrends"><img src="img/sleepVPainLevels.png" style="width:100%;"></a>
+              <a href="#/progressTrends"><img src="../img/sleepVPainLevels.png" style="width:100%;"></a>
             </div>
           </div>
         </ion-content>
@@ -250,13 +250,13 @@
         <ion-content>
           <div class="row row-center">
             <div class="col col-33 col-offset-33" style="padding: 0;">
-              <img src="img/userImage-small.png" class="userImage">
+              <img src="../img/userImage-small.png" class="userImage">
             </div>
           </div>
           <h4>John Doe</h4>
           <p style="font-size: 135%;">Progress Trends</p>
           <div class="row">
-            <div class="col col-80 col-offset-10"><img src="img/progressTrends.png" style="width:100%;"></div>
+            <div class="col col-80 col-offset-10"><img src="../img/progressTrends.png" style="width:100%;"></div>
           </div>
         </ion-content>
         <ion-footer-bar class="bar-jastr">
