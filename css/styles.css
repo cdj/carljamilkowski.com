@@ -47,7 +47,7 @@ a, body.isDesktop a:hover, a:active {
     left: 0;
 }
 #intro.section {
-    background-image: url('http://cdn.carljamilkowski.com/img/carl-palm.jpg');
+    background-image: url('/img/carl-palm.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
@@ -884,7 +884,7 @@ body.isDesktop #skills .primary .skill:hover {
     padding-bottom: 115px;
     padding-left: 32px;
     padding-right: 30px;
-    background-image: url('http://cdn.carljamilkowski.com/Archive/jastr/iPhone5.png');
+    background-image: url('/Archive/jastr/iPhone5.png');
     background-repeat: no-repeat;
     background-position: left top;
     clear: none;
@@ -1039,7 +1039,7 @@ body.isDesktop a[data-fancybox="first"]:hover::after {
 body.isDesktop a.icon-link[data-fancybox]:hover::after,
 body.isDesktop a.kudo-icon-link[data-fancybox]:hover::after {
     content: '';
-    background-image: url('http://cdn.carljamilkowski.com/img/fs.png');
+    background-image: url('/img/fs.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 20px;
@@ -1066,7 +1066,7 @@ body.isDesktop div:not(.graphic) > a:not(.icon-link)[data-fancybox]:hover {
 }
 body.isDesktop a:not(.icon-link)[data-fancybox]:hover::after {
     content: '';
-    background-image: url('http://cdn.carljamilkowski.com/img/fs.png');
+    background-image: url('/img/fs.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 20px;
@@ -1123,7 +1123,7 @@ a[target='_blank'] {
 }
 a[target='_blank']::after {
     content: '';
-    background-image: url('http://cdn.carljamilkowski.com/img/new_win.png');
+    background-image: url('/img/new_win.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 14px;
@@ -1160,7 +1160,7 @@ body.isDesktop a[target='_blank']:hover::after {
 }
 #iPhone-prototype-selections a::after {
     content: '';
-    background-image: url('http://cdn.carljamilkowski.com/img/play.png');
+    background-image: url('/img/play.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 19px;
