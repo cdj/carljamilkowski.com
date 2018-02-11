@@ -79,7 +79,7 @@ function localAnalytics(event) {
     (function(i,s,o,g,r,a,m){i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.onerror=function(){console.warn("Google Analytics local did not load", event);};a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','http://analytics.carljamilkowski.com/analytics.js','ga');
+    })(window,document,'script','https://analytics.carljamilkowski.com/analytics.js','ga');
 
     // analyticsFallback(event);
 }
