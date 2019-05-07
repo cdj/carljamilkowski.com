@@ -15,7 +15,6 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,lo
 }
 </script>
 <style type="text/css">
-<!--
 .rlist {
 	margin: 20px;
 	border: 4px solid #000000;
@@ -36,7 +35,6 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,lo
 .rlist td {
 	border: 1px dotted #8C0000;
 }
--->
 </style>
 </head>
 

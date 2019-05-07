@@ -8,7 +8,6 @@
 <script defer type="text/javascript" src="scripts/pngfix.js"></script>
 <![endif]-->
 <script language="JavaScript" type="text/javascript">
-<!--
 function imgSwap(oImg)
 {
    var strOver  = "_on"    // image to be used with mouse over
@@ -34,16 +33,13 @@ function descoff(obj)
    obj.style.visibility = 'hidden';
    obj.style.display = 'none';
 }
-//-->
 </script>
 <link href="Styles/general.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-<!--
 .desc {
 	visibility: hidden;
 	display: none;
 }
--->
 </style>
 </head>
 

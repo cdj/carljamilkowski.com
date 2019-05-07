@@ -5,7 +5,6 @@
 <title>&quot;Stuffed&quot; Comedy Players</title>
 <link href="Styles/general.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-<!--
 .playerList{
 	margin:0px;
 	padding:2px;
@@ -37,7 +36,6 @@
 	border-left-style: none;
 	float: right;
 }
--->
 </style>
 <!--[if lt IE 7.]>
 <script defer type="text/javascript" src="scripts/pngfix.js"></script>

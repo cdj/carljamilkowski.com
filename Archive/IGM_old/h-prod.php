@@ -8,11 +8,9 @@
 <script defer type="text/javascript" src="scripts/pngfix.js"></script>
 <![endif]-->
 <style type="text/css">
-<!--
 .prod {
 	padding-left: 20px;
 }
--->
 </style>
 </head>
 

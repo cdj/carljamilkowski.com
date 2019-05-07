@@ -5,7 +5,6 @@
 <title>Episode Guide</title>
 <link href="Styles/general.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-<!--
 .ham {
 	background-image: url(media/graphics/ham-pick.gif);
 	height: 100px;
@@ -74,7 +73,6 @@
 .hamside a {
 	color: #003300;
 }
--->
 </style>
 <!--[if lt IE 7.]>
 <script defer type="text/javascript" src="scripts/pngfix.js"></script>

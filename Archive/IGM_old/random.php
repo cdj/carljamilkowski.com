@@ -8,11 +8,9 @@
 <script defer type="text/javascript" src="scripts/pngfix.js"></script>
 <![endif]-->
 <style type="text/css">
-<!--
 .rand {
 	padding-left: 20px;
 }
--->
 </style>
 </head>
 

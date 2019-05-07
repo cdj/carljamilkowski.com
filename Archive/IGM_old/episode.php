@@ -5,7 +5,6 @@
 <title>Show Notes: Episode XYZ</title>
 <link href="Styles/general.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-<!--
 .ep {
 	background-color: #C6FA29;
 	border: 2px solid #009900;
@@ -65,7 +64,6 @@ h2 {
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
--->
 </style>
 <!--[if lt IE 7.]>
 <script defer type="text/javascript" src="scripts/pngfix.js"></script>
