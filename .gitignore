@@ -6,3 +6,5 @@ BingSiteAuth.xml
 google*.html
 
 robots.txt
+.well-known/.htaccess
+.well-known/.htaccess.old
